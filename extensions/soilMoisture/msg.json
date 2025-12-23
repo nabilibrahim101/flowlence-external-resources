@@ -1,0 +1,7 @@
+{
+    "SOILMOISTURE_CATEGORY": "Soil Moisture",
+    "SOILMOISTURE_INIT": "initialize soil moisture sensor pin %1",
+    "SOILMOISTURE_READVALUE": "read soil moisture raw value",
+    "SOILMOISTURE_READPERCENT": "read soil moisture %",
+    "SOILMOISTURE_ISSOILDRY": "soil is dry (below %1 %)?"
+}

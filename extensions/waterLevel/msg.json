@@ -1,0 +1,7 @@
+{
+    "WATERLEVEL_CATEGORY": "Water Level",
+    "WATERLEVEL_INIT": "initialize water level sensor pin %1",
+    "WATERLEVEL_READVALUE": "read water level raw value",
+    "WATERLEVEL_READPERCENT": "read water level %",
+    "WATERLEVEL_ISLOW": "water level is low (below %1 %)?"
+}

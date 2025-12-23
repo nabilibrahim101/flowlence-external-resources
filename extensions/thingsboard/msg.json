@@ -1,0 +1,14 @@
+{
+    "THINGSBOARD_CATEGORY": "WiFi & ThingsBoard",
+    "THINGSBOARD_WIFI_CONNECT": "connect to WiFi SSID %1 password %2",
+    "THINGSBOARD_WIFI_IS_CONNECTED": "WiFi is connected?",
+    "THINGSBOARD_WIFI_WAIT_CONNECTED": "wait until WiFi connected",
+    "THINGSBOARD_WIFI_GET_IP": "get IP address",
+    "THINGSBOARD_WIFI_DISCONNECT": "disconnect WiFi",
+    "THINGSBOARD_CONNECT": "connect to ThingsBoard server %1 device token %2",
+    "THINGSBOARD_IS_CONNECTED": "ThingsBoard is connected?",
+    "THINGSBOARD_SEND_KEY_VALUE": "send to ThingsBoard key %1 value %2",
+    "THINGSBOARD_SEND_MULTIPLE": "send to ThingsBoard %1 = %2 and %3 = %4",
+    "THINGSBOARD_LOOP": "ThingsBoard keep connection alive",
+    "THINGSBOARD_DISCONNECT": "disconnect from ThingsBoard"
+}

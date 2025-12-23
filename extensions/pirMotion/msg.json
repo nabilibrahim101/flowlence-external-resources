@@ -1,0 +1,7 @@
+{
+    "PIRMOTION_CATEGORY": "PIR Motion",
+    "PIRMOTION_INIT": "initialize PIR motion sensor pin %1",
+    "PIRMOTION_DETECTED": "motion detected?",
+    "PIRMOTION_WAITUNTILMOTION": "wait until motion detected",
+    "PIRMOTION_WAITUNTILNOMOTION": "wait until no motion"
+}
