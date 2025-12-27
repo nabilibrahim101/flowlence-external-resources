@@ -1,0 +1,9 @@
+{
+    "TRAFFICLIGHT_CATEGORY": "Traffic Light",
+    "TRAFFICLIGHT_SET": "set %1 light pin %2 to %3",
+    "TRAFFICLIGHT_RED": "red",
+    "TRAFFICLIGHT_ORANGE": "orange",
+    "TRAFFICLIGHT_GREEN": "green",
+    "TRAFFICLIGHT_ON": "ON",
+    "TRAFFICLIGHT_OFF": "OFF"
+}
