@@ -28,82 +28,10 @@ function registerBlocks (Blockly) {
         ['GPIO 33', '33']
     ];
 
-    Blockly.Blocks.led_init = {
+    Blockly.Blocks.led_set = {
         init: function () {
             this.jsonInit({
-                message0: Blockly.Msg.LED_INIT,
-                args0: [
-                    {
-                        type: 'field_dropdown',
-                        name: 'PIN',
-                        options: digitalPins
-                    }
-                ],
-                colour: colour,
-                secondaryColour: secondaryColour,
-                extensions: ['shape_statement']
-            });
-        }
-    };
-
-    Blockly.Blocks.led_on = {
-        init: function () {
-            this.jsonInit({
-                message0: Blockly.Msg.LED_ON,
-                args0: [
-                    {
-                        type: 'field_dropdown',
-                        name: 'PIN',
-                        options: digitalPins
-                    }
-                ],
-                colour: colour,
-                secondaryColour: secondaryColour,
-                extensions: ['shape_statement']
-            });
-        }
-    };
-
-    Blockly.Blocks.led_off = {
-        init: function () {
-            this.jsonInit({
-                message0: Blockly.Msg.LED_OFF,
-                args0: [
-                    {
-                        type: 'field_dropdown',
-                        name: 'PIN',
-                        options: digitalPins
-                    }
-                ],
-                colour: colour,
-                secondaryColour: secondaryColour,
-                extensions: ['shape_statement']
-            });
-        }
-    };
-
-    Blockly.Blocks.led_toggle = {
-        init: function () {
-            this.jsonInit({
-                message0: Blockly.Msg.LED_TOGGLE,
-                args0: [
-                    {
-                        type: 'field_dropdown',
-                        name: 'PIN',
-                        options: digitalPins
-                    }
-                ],
-                colour: colour,
-                secondaryColour: secondaryColour,
-                extensions: ['shape_statement']
-            });
-        }
-    };
-
-    Blockly.Blocks.led_setState = {
-        init: function () {
-            this.jsonInit({
-                message0: Blockly.Msg.LED_SETSTATE,
+                message0: Blockly.Msg.LED_SET,
                 args0: [
                     {
                         type: 'field_dropdown',
@@ -117,28 +45,6 @@ function registerBlocks (Blockly) {
                             [Blockly.Msg.LED_STATE_ON || 'ON', 'HIGH'],
                             [Blockly.Msg.LED_STATE_OFF || 'OFF', 'LOW']
                         ]
-                    }
-                ],
-                colour: colour,
-                secondaryColour: secondaryColour,
-                extensions: ['shape_statement']
-            });
-        }
-    };
-
-    Blockly.Blocks.led_blink = {
-        init: function () {
-            this.jsonInit({
-                message0: Blockly.Msg.LED_BLINK,
-                args0: [
-                    {
-                        type: 'field_dropdown',
-                        name: 'PIN',
-                        options: digitalPins
-                    },
-                    {
-                        type: 'input_value',
-                        name: 'DURATION'
                     }
                 ],
                 colour: colour,

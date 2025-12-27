@@ -1,11 +1,6 @@
 {
     "LED_CATEGORY": "LED",
-    "LED_INIT": "initialize LED on pin %1",
-    "LED_ON": "turn LED on pin %1 ON",
-    "LED_OFF": "turn LED on pin %1 OFF",
-    "LED_TOGGLE": "toggle LED on pin %1",
-    "LED_SETSTATE": "set LED on pin %1 to %2",
+    "LED_SET": "set LED on pin %1 to %2",
     "LED_STATE_ON": "ON",
-    "LED_STATE_OFF": "OFF",
-    "LED_BLINK": "blink LED on pin %1 delay %2 ms"
+    "LED_STATE_OFF": "OFF"
 }
