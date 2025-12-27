@@ -5,6 +5,9 @@ function registerBlocks (Blockly) {
     const colour = '#27AE60';
     const secondaryColour = '#1E8449';
 
+    // LED icon as base64 SVG
+    const ledIconUrl = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij48ZWxsaXBzZSBjeD0iMTIiIGN5PSI5IiByeD0iNyIgcnk9IjgiIGZpbGw9IiMyRUNDNzEiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxIi8+PGVsbGlwc2UgY3g9IjEyIiBjeT0iOCIgcng9IjQiIHJ5PSI1IiBmaWxsPSIjNThENjhEIiBvcGFjaXR5PSIwLjciLz48ZWxsaXBzZSBjeD0iMTAiIGN5PSI2IiByeD0iMiIgcnk9IjIuNSIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC41Ii8+PHJlY3QgeD0iOCIgeT0iMTYiIHdpZHRoPSI4IiBoZWlnaHQ9IjMiIGZpbGw9IiM5NUE1QTYiIHJ4PSIxIi8+PHJlY3QgeD0iMTAiIHk9IjE5IiB3aWR0aD0iMS41IiBoZWlnaHQ9IjQiIGZpbGw9IiM3RjhDOEQiLz48cmVjdCB4PSIxMi41IiB5PSIxOSIgd2lkdGg9IjEuNSIgaGVpZ2h0PSI0IiBmaWxsPSIjN0Y4QzhEIi8+PC9zdmc+';
+
     // ESP32 digital pins
     const digitalPins = [
         ['GPIO 2', '2'],
@@ -31,8 +34,16 @@ function registerBlocks (Blockly) {
     Blockly.Blocks.led_set = {
         init: function () {
             this.jsonInit({
-                message0: Blockly.Msg.LED_SET,
+                message0: '%1 ' + Blockly.Msg.LED_SET,
                 args0: [
+                    {
+                        type: 'field_image',
+                        src: ledIconUrl,
+                        width: 24,
+                        height: 24,
+                        alt: 'LED',
+                        flip_rtl: false
+                    },
                     {
                         type: 'field_dropdown',
                         name: 'PIN',
