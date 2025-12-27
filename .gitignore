@@ -19,3 +19,7 @@ devices/*/arduinoData/staging
 
 # Webpack dists
 *.bundle.js
+
+# Release artifacts
+external-resources*.zip
+*checksums*.txt
