@@ -34,7 +34,7 @@ function registerBlocks (Blockly) {
     Blockly.Blocks.led_set = {
         init: function () {
             this.jsonInit({
-                message0: '%1 ' + Blockly.Msg.LED_SET,
+                message0: '%1 set LED on pin %2 to %3',
                 args0: [
                     {
                         type: 'field_image',
