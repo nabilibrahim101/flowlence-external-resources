@@ -7,7 +7,7 @@ const trafficLight = formatMessage => ({
     version: '1.0.0',
     supportDevice: ['arduinoUno', 'arduinoNano', 'arduinoMega2560', 'arduinoEsp32', 'arduinoEsp8266'],
     author: 'Flowlence',
-    iconURL: `assets/trafficLight.svg`,
+    iconURL: `assets/trafficLight.png`,
     description: formatMessage({
         id: 'trafficLight.description',
         default: 'Control traffic light module with red, orange, and green LEDs.'

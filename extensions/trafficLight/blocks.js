@@ -31,10 +31,48 @@ function registerBlocks (Blockly) {
         ['GPIO 33', '33']
     ];
 
+    // Initialize traffic light with 3 pins
+    Blockly.Blocks.trafficLight_init = {
+        init: function () {
+            this.jsonInit({
+                message0: '%1 init traffic light red %2 orange %3 green %4',
+                args0: [
+                    {
+                        type: 'field_image',
+                        src: trafficLightIconUrl,
+                        width: 24,
+                        height: 24,
+                        alt: 'Traffic Light',
+                        flip_rtl: false
+                    },
+                    {
+                        type: 'field_dropdown',
+                        name: 'RED_PIN',
+                        options: digitalPins
+                    },
+                    {
+                        type: 'field_dropdown',
+                        name: 'ORANGE_PIN',
+                        options: digitalPins
+                    },
+                    {
+                        type: 'field_dropdown',
+                        name: 'GREEN_PIN',
+                        options: digitalPins
+                    }
+                ],
+                colour: colour,
+                secondaryColour: secondaryColour,
+                extensions: ['shape_statement']
+            });
+        }
+    };
+
+    // Control traffic light by color
     Blockly.Blocks.trafficLight_set = {
         init: function () {
             this.jsonInit({
-                message0: '%1 set %2 light pin %3 to %4',
+                message0: '%1 set %2 light to %3',
                 args0: [
                     {
                         type: 'field_image',
@@ -52,11 +90,6 @@ function registerBlocks (Blockly) {
                             [Blockly.Msg.TRAFFICLIGHT_ORANGE || 'orange', 'ORANGE'],
                             [Blockly.Msg.TRAFFICLIGHT_GREEN || 'green', 'GREEN']
                         ]
-                    },
-                    {
-                        type: 'field_dropdown',
-                        name: 'PIN',
-                        options: digitalPins
                     },
                     {
                         type: 'field_dropdown',

@@ -30,10 +30,11 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {
             "TRAFFICLIGHT_CATEGORY": "Traffic Light",
-            "TRAFFICLIGHT_SET": "set %1 light pin %2 to %3",
-            "TRAFFICLIGHT_RED": "red",
-            "TRAFFICLIGHT_ORANGE": "orange",
-            "TRAFFICLIGHT_GREEN": "green",
+            "TRAFFICLIGHT_INIT": "init traffic light red %1 orange %2 green %3",
+            "TRAFFICLIGHT_SET": "set %1 light to %2",
+            "TRAFFICLIGHT_RED": "Red",
+            "TRAFFICLIGHT_ORANGE": "Orange",
+            "TRAFFICLIGHT_GREEN": "Green",
             "TRAFFICLIGHT_ON": "ON",
             "TRAFFICLIGHT_OFF": "OFF"
         }
@@ -42,7 +43,8 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["zh-cn"],
         {
             "TRAFFICLIGHT_CATEGORY": "交通灯",
-            "TRAFFICLIGHT_SET": "设置 %1 灯引脚 %2 为 %3",
+            "TRAFFICLIGHT_INIT": "初始化交通灯 红 %1 橙 %2 绿 %3",
+            "TRAFFICLIGHT_SET": "设置 %1 灯为 %2",
             "TRAFFICLIGHT_RED": "红",
             "TRAFFICLIGHT_ORANGE": "橙",
             "TRAFFICLIGHT_GREEN": "绿",
@@ -58,7 +60,8 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["ar"],
         {
             "TRAFFICLIGHT_CATEGORY": "إشارة المرور",
-            "TRAFFICLIGHT_SET": "ضبط ضوء %1 منفذ %2 إلى %3",
+            "TRAFFICLIGHT_INIT": "تهيئة إشارة المرور أحمر %1 برتقالي %2 أخضر %3",
+            "TRAFFICLIGHT_SET": "ضبط ضوء %1 إلى %2",
             "TRAFFICLIGHT_RED": "أحمر",
             "TRAFFICLIGHT_ORANGE": "برتقالي",
             "TRAFFICLIGHT_GREEN": "أخضر",
