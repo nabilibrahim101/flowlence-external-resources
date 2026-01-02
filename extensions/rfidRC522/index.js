@@ -18,7 +18,8 @@ const rfidRC522 = formatMessage => ({
     generator: 'generator.js',
     toolbox: 'toolbox.js',
     translations: 'translations.js',
-    official: true,
+    library: 'lib',
+    official: false,
     tags: ['sensor'],
     helpLink: 'https://wiki.keyestudio.com/'
 });
