@@ -2,14 +2,14 @@
 /* eslint-disable max-len */
 /* eslint-disable require-jsdoc */
 function registerBlocks (Blockly) {
-    const color = '#42CCFF';
+    const colour = '#42CCFF';
     const secondaryColour = '#00BFFF';
 
     Blockly.Blocks.rfidRC522_init = {
         init: function () {
             this.jsonInit({
-                message0: Blockly.Msg.RFIDRC522_INIT,
-                colour: color,
+                message0: Blockly.Msg.RFIDRC522_INIT || 'initialize RFID RC522 (I2C)',
+                colour: colour,
                 secondaryColour: secondaryColour,
                 extensions: ['shape_statement']
             });
@@ -19,10 +19,10 @@ function registerBlocks (Blockly) {
     Blockly.Blocks.rfidRC522_read = {
         init: function () {
             this.jsonInit({
-                message0: Blockly.Msg.RFIDRC522_READ,
-                colour: color,
+                message0: Blockly.Msg.RFIDRC522_READ || 'read RFID card value',
+                colour: colour,
                 secondaryColour: secondaryColour,
-                extensions: ['output_number']
+                extensions: ['output_string']
             });
         }
     };
