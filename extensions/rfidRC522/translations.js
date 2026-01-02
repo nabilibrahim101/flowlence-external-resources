@@ -15,10 +15,6 @@ function getInterfaceTranslations () {
             "rfidRC522.name": "RFID RC522 (I2C)",
             "rfidRC522.description": "使用I2C通信的RFID RC522模块。"
         },
-        "zh-tw": {
-            "rfidRC522.name": "RFID RC522 (I2C)",
-            "rfidRC522.description": "使用I2C通信的RFID RC522模塊。"
-        },
         "ar": {
             "rfidRC522.name": "RFID RC522 (I2C)",
             "rfidRC522.description": "وحدة RFID RC522 باستخدام اتصال I2C."
@@ -35,6 +31,7 @@ function registerBlocksMessages (Blockly) {
         {
             "RFIDRC522_CATEGORY": "RFID RC522",
             "RFIDRC522_INIT": "initialize RFID RC522 (I2C)",
+            "RFIDRC522_DETECTED": "RFID card detected?",
             "RFIDRC522_READ": "read RFID card value"
         }
     );
@@ -43,22 +40,20 @@ function registerBlocksMessages (Blockly) {
         {
             "RFIDRC522_CATEGORY": "RFID RC522",
             "RFIDRC522_INIT": "初始化 RFID RC522 (I2C)",
+            "RFIDRC522_DETECTED": "检测到RFID卡？",
             "RFIDRC522_READ": "读取RFID卡值"
         }
     );
 
-    Object.assign(Blockly.ScratchMsgs.locales["zh-tw"],
-        {
-            "RFIDRC522_CATEGORY": "RFID RC522",
-            "RFIDRC522_INIT": "初始化 RFID RC522 (I2C)",
-            "RFIDRC522_READ": "讀取RFID卡值"
-        }
-    );
-
+    // Initialize ar locale if it doesn't exist
+    if (!Blockly.ScratchMsgs.locales["ar"]) {
+        Blockly.ScratchMsgs.locales["ar"] = {};
+    }
     Object.assign(Blockly.ScratchMsgs.locales["ar"],
         {
             "RFIDRC522_CATEGORY": "RFID RC522",
             "RFIDRC522_INIT": "تهيئة RFID RC522 (I2C)",
+            "RFIDRC522_DETECTED": "تم اكتشاف بطاقة RFID؟",
             "RFIDRC522_READ": "قراءة قيمة بطاقة RFID"
         }
     );

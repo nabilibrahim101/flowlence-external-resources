@@ -5,10 +5,9 @@ const rfidRC522 = formatMessage => ({
     }),
     extensionId: 'rfidRC522',
     version: '1.0.0',
-    supportDevice: ['arduinoUno', 'arduinoNano', 'arduinoLeonardo',
-        'arduinoMega2560', 'arduinoEsp32', 'arduinoEsp8266'],
+    supportDevice: ['arduinoUno', 'arduinoNano', 'arduinoMega2560', 'arduinoEsp32', 'arduinoEsp8266'],
     author: 'Flowlence',
-    iconURL: `assets/rfidRC522.png`,
+    iconURL: `assets/rfidRC522.jpg`,
     description: formatMessage({
         id: 'rfidRC522.description',
         default: 'RFID RC522 module using I2C communication.'
@@ -20,8 +19,7 @@ const rfidRC522 = formatMessage => ({
     translations: 'translations.js',
     library: 'lib',
     official: false,
-    tags: ['sensor'],
-    helpLink: 'https://wiki.keyestudio.com/'
+    tags: ['sensor']
 });
 
 module.exports = rfidRC522;

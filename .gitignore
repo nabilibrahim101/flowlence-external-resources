@@ -23,3 +23,4 @@ devices/*/arduinoData/staging
 # Release artifacts
 external-resources*.zip
 *checksums*.txt
+.vs/

@@ -1,5 +1,6 @@
 {
     "RFIDRC522_CATEGORY": "RFID RC522",
     "RFIDRC522_INIT": "initialize RFID RC522 (I2C)",
+    "RFIDRC522_DETECTED": "RFID card detected?",
     "RFIDRC522_READ": "read RFID card value"
 }
