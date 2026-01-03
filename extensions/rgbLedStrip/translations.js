@@ -22,6 +22,10 @@ function getInterfaceTranslations () {
         "zh-tw": {
             "rgbLedStrip.name": "RGB LED 燈條",
             "rgbLedStrip.description": "基於單總線的 RGB LED 的單個像素或燈條。"
+        },
+        "ar": {
+            "rgbLedStrip.name": "شريط LED RGB",
+            "rgbLedStrip.description": "وحدات بكسل وشريط LED RGB أحادي السلك."
         }
     };
 }
@@ -80,6 +84,23 @@ function registerBlocksMessages (Blockly) {
             "RGBLEDSTRIP_SETBRIGHTNESS": "設置 rgb led 亮度 %1",
             "RGBLEDSTRIP_SETPIXELCOLOR": "rgb led 設置像素 %1 顏色 %2",
             "RGBLEDSTRIP_SHOW": "刷新 rgb led 顯示"
+        }
+    );
+
+    // Initialize ar locale if it doesn't exist
+    if (!Blockly.ScratchMsgs.locales["ar"]) {
+        Blockly.ScratchMsgs.locales["ar"] = {};
+    }
+    Object.assign(Blockly.ScratchMsgs.locales["ar"],
+        {
+            "RGBLEDSTRIP_CATEGORY": "شريط LED RGB",
+            "RGBLEDSTRIP_CLEAR": "مسح جميع LED RGB",
+            "RGBLEDSTRIP_COLOR": "لون شريط RGB LED أحمر %1 أخضر %2 أزرق %3",
+            "RGBLEDSTRIP_FILL": "تعبئة RGB LED من البكسل %1 عدد %2 باللون %3",
+            "RGBLEDSTRIP_INIT": "تهيئة شريط RGB LED بطول %1 منفذ %2",
+            "RGBLEDSTRIP_SETBRIGHTNESS": "ضبط سطوع RGB LED %1",
+            "RGBLEDSTRIP_SETPIXELCOLOR": "ضبط بكسل RGB LED %1 باللون %2",
+            "RGBLEDSTRIP_SHOW": "تحديث عرض RGB LED"
         }
     );
 

@@ -7,7 +7,7 @@ function registerToolboxs () {
     <block type="rgbLedStrip_init" id="rgbLedStrip_init">
         <value name="LEN">
             <shadow type="math_whole_number">
-                <field name="NUM">16</field>
+                <field name="NUM">4</field>
             </shadow>
         </value>
         <field name="PIN">2</field>
