@@ -1,0 +1,12 @@
+{
+    "servoArduino.name": {
+        "en": "Servo",
+        "zh-cn": "舵机",
+        "ar": "محرك سيرفو"
+    },
+    "servoArduino.description": {
+        "en": "Servo motor driver for Arduino and ESP32",
+        "zh-cn": "Arduino和ESP32舵机驱动",
+        "ar": "تحكم بمحرك السيرفو لأردوينو وESP32"
+    }
+}

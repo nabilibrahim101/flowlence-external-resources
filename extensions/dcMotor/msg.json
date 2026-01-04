@@ -1,0 +1,12 @@
+{
+    "dcMotor.name": {
+        "en": "DC Motor",
+        "zh-cn": "直流电机",
+        "ar": "محرك DC"
+    },
+    "dcMotor.description": {
+        "en": "DC Motor driver for ESP32",
+        "zh-cn": "ESP32直流电机驱动",
+        "ar": "تحكم بمحرك DC لـ ESP32"
+    }
+}
