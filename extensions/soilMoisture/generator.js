@@ -6,8 +6,17 @@ function registerGenerators(Blockly) {
     Blockly.Arduino.soilMoisture_init = function (block) {
         const pin = block.getFieldValue('PIN');
         Blockly.Arduino.definitions_.soilMoisture_pin = `const int soilMoisturePin = ${pin};`;
+        // Default calibration: dry=4095, wet=0 (most common capacitive sensor behavior)
+        Blockly.Arduino.definitions_.soilMoisture_calibration = `int soilMoistureDryValue = 4095;\nint soilMoistureWetValue = 0;`;
         Blockly.Arduino.setups_.soilMoisture_init = `pinMode(soilMoisturePin, INPUT);`;
         return '';
+    };
+
+    Blockly.Arduino.soilMoisture_calibrate = function (block) {
+        const dryValue = Blockly.Arduino.valueToCode(block, 'DRYVALUE', Blockly.Arduino.ORDER_ATOMIC) || '4095';
+        const wetValue = Blockly.Arduino.valueToCode(block, 'WETVALUE', Blockly.Arduino.ORDER_ATOMIC) || '0';
+        const code = `soilMoistureDryValue = ${dryValue};\nsoilMoistureWetValue = ${wetValue};\n`;
+        return code;
     };
 
     Blockly.Arduino.soilMoisture_readValue = function () {
@@ -16,14 +25,11 @@ function registerGenerators(Blockly) {
     };
 
     Blockly.Arduino.soilMoisture_readPercent = function () {
-        // ESP32 has 12-bit ADC (0-4095), Arduino has 10-bit (0-1023)
-        // We'll use map function which works for both
         Blockly.Arduino.definitions_.soilMoisture_percent = `
 int getSoilMoisturePercent() {
     int value = analogRead(soilMoisturePin);
-    // Sensor reads HIGH when dry, LOW when wet
-    // Typical range: 0 (wet) to 4095/1023 (dry)
-    int percent = map(value, 4095, 0, 0, 100);
+    // Map using calibrated values: dry=0%, wet=100%
+    int percent = map(value, soilMoistureDryValue, soilMoistureWetValue, 0, 100);
     return constrain(percent, 0, 100);
 }`;
         const code = `getSoilMoisturePercent()`;
@@ -37,7 +43,7 @@ int getSoilMoisturePercent() {
         Blockly.Arduino.definitions_.soilMoisture_percent = `
 int getSoilMoisturePercent() {
     int value = analogRead(soilMoisturePin);
-    int percent = map(value, 4095, 0, 0, 100);
+    int percent = map(value, soilMoistureDryValue, soilMoistureWetValue, 0, 100);
     return constrain(percent, 0, 100);
 }`;
         return [code, Blockly.Arduino.ORDER_ATOMIC];

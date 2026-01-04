@@ -2,8 +2,8 @@
 /* eslint-disable max-len */
 /* eslint-disable require-jsdoc */
 function registerBlocks (Blockly) {
-    const colour = '#B943FF';
-    const secondaryColour = '#9900FF';
+    const colour = '#9C27B0';
+    const secondaryColour = '#7B1FA2';
 
     const digitalPins = Blockly.Device.getPinOptions('arduino_pin_setDigitalOutput');
 
@@ -56,10 +56,10 @@ function registerBlocks (Blockly) {
         ['4', '4']
     ];
 
-    Blockly.Blocks.passiveBuzzer_init = {
+    Blockly.Blocks.hornAmplifier_init = {
         init: function () {
             this.jsonInit({
-                message0: Blockly.Msg.PASSIVEBUZZER_INIT,
+                message0: Blockly.Msg.HORNAMPLIFIER_INIT,
                 args0: [
                     {
                         type: 'field_dropdown',
@@ -74,10 +74,10 @@ function registerBlocks (Blockly) {
         }
     };
 
-    Blockly.Blocks.passiveBuzzer_playToneForBeat = {
+    Blockly.Blocks.hornAmplifier_playToneForBeat = {
         init: function () {
             this.jsonInit({
-                message0: Blockly.Msg.PASSIVEBUZZER_PLAYTONEFORBEAT,
+                message0: Blockly.Msg.HORNAMPLIFIER_PLAYTONEFORBEAT,
                 args0: [
                     {
                         type: 'field_dropdown',
@@ -97,10 +97,31 @@ function registerBlocks (Blockly) {
         }
     };
 
-    Blockly.Blocks.passiveBuzzer_setTempo = {
+    Blockly.Blocks.hornAmplifier_playToneForMs = {
         init: function () {
             this.jsonInit({
-                message0: Blockly.Msg.PASSIVEBUZZER_SETTEMPO,
+                message0: Blockly.Msg.HORNAMPLIFIER_PLAYTONEFORMS,
+                args0: [
+                    {
+                        type: 'input_value',
+                        name: 'FREQ'
+                    },
+                    {
+                        type: 'input_value',
+                        name: 'TIME'
+                    }
+                ],
+                colour: colour,
+                secondaryColour: secondaryColour,
+                extensions: ['shape_statement']
+            });
+        }
+    };
+
+    Blockly.Blocks.hornAmplifier_setTempo = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.HORNAMPLIFIER_SETTEMPO,
                 args0: [
                     {
                         type: 'input_value',
@@ -114,37 +135,10 @@ function registerBlocks (Blockly) {
         }
     };
 
-    Blockly.Blocks.passiveBuzzer_playRingtone = {
+    Blockly.Blocks.hornAmplifier_stop = {
         init: function () {
             this.jsonInit({
-                message0: Blockly.Msg.PASSIVEBUZZER_PLAYRINGTONE,
-                args0: [
-                    {
-                        type: 'field_dropdown',
-                        name: 'NO',
-                        options: [
-                            [Blockly.Msg.PASSIVEBUZZER_CONNECTION, 'R_connection'],
-                            [Blockly.Msg.PASSIVEBUZZER_DISCONNECTION, 'R_disconnection'],
-                            [Blockly.Msg.PASSIVEBUZZER_DIDI, 'R_buttonPushed'],
-                            [Blockly.Msg.PASSIVEBUZZER_MODE1, 'R_mode1'],
-                            [Blockly.Msg.PASSIVEBUZZER_MODE2, 'R_mode2'],
-                            [Blockly.Msg.PASSIVEBUZZER_MODE3, 'R_mode3'],
-                            [Blockly.Msg.PASSIVEBUZZER_SURPRISE, 'R_surprise'],
-                            [Blockly.Msg.PASSIVEBUZZER_OHOOH, 'R_OhOoh'],
-                            [Blockly.Msg.PASSIVEBUZZER_OHOOH2, 'R_OhOoh2'],
-                            [Blockly.Msg.PASSIVEBUZZER_CUDDLY, 'R_cuddly'],
-                            [Blockly.Msg.PASSIVEBUZZER_SLEEPING, 'R_sleeping'],
-                            [Blockly.Msg.PASSIVEBUZZER_HAPPY, 'R_happy'],
-                            [Blockly.Msg.PASSIVEBUZZER_SUPERHAPPY, 'R_superHappy'],
-                            [Blockly.Msg.PASSIVEBUZZER_HAPPYSHORT, 'R_happy_short'],
-                            [Blockly.Msg.PASSIVEBUZZER_SAD, 'R_sad'],
-                            [Blockly.Msg.PASSIVEBUZZER_CONFUSED, 'R_confused'],
-                            [Blockly.Msg.PASSIVEBUZZER_FART1, 'R_fart1'],
-                            [Blockly.Msg.PASSIVEBUZZER_FART2, 'R_fart2'],
-                            [Blockly.Msg.PASSIVEBUZZER_FART3, 'R_fart3']
-                        ]
-                    }
-                ],
+                message0: Blockly.Msg.HORNAMPLIFIER_STOP,
                 colour: colour,
                 secondaryColour: secondaryColour,
                 extensions: ['shape_statement']
@@ -152,22 +146,34 @@ function registerBlocks (Blockly) {
         }
     };
 
-    // Play Music block (ESP32 only)
-    Blockly.Blocks.passiveBuzzer_playMusic = {
+    Blockly.Blocks.hornAmplifier_playRingtone = {
         init: function () {
             this.jsonInit({
-                message0: Blockly.Msg.PASSIVEBUZZER_PLAYMUSIC,
+                message0: Blockly.Msg.HORNAMPLIFIER_PLAYRINGTONE,
                 args0: [
                     {
                         type: 'field_dropdown',
-                        name: 'MUSIC',
+                        name: 'NO',
                         options: [
-                            [Blockly.Msg.PASSIVEBUZZER_MUSIC_BIRTHDAY, 'birthday'],
-                            [Blockly.Msg.PASSIVEBUZZER_MUSIC_TETRIS, 'tetris'],
-                            [Blockly.Msg.PASSIVEBUZZER_MUSIC_ODETOJOY, 'Ode_to_Joy'],
-                            [Blockly.Msg.PASSIVEBUZZER_MUSIC_CHRISTMAS, 'christmas'],
-                            [Blockly.Msg.PASSIVEBUZZER_MUSIC_SUPERMARIO, 'super_mario'],
-                            [Blockly.Msg.PASSIVEBUZZER_MUSIC_STARWARS, 'star_war_tone']
+                            [Blockly.Msg.HORNAMPLIFIER_CONNECTION, 'R_connection'],
+                            [Blockly.Msg.HORNAMPLIFIER_DISCONNECTION, 'R_disconnection'],
+                            [Blockly.Msg.HORNAMPLIFIER_DIDI, 'R_buttonPushed'],
+                            [Blockly.Msg.HORNAMPLIFIER_MODE1, 'R_mode1'],
+                            [Blockly.Msg.HORNAMPLIFIER_MODE2, 'R_mode2'],
+                            [Blockly.Msg.HORNAMPLIFIER_MODE3, 'R_mode3'],
+                            [Blockly.Msg.HORNAMPLIFIER_SURPRISE, 'R_surprise'],
+                            [Blockly.Msg.HORNAMPLIFIER_OHOOH, 'R_OhOoh'],
+                            [Blockly.Msg.HORNAMPLIFIER_OHOOH2, 'R_OhOoh2'],
+                            [Blockly.Msg.HORNAMPLIFIER_CUDDLY, 'R_cuddly'],
+                            [Blockly.Msg.HORNAMPLIFIER_SLEEPING, 'R_sleeping'],
+                            [Blockly.Msg.HORNAMPLIFIER_HAPPY, 'R_happy'],
+                            [Blockly.Msg.HORNAMPLIFIER_SUPERHAPPY, 'R_superHappy'],
+                            [Blockly.Msg.HORNAMPLIFIER_HAPPYSHORT, 'R_happy_short'],
+                            [Blockly.Msg.HORNAMPLIFIER_SAD, 'R_sad'],
+                            [Blockly.Msg.HORNAMPLIFIER_CONFUSED, 'R_confused'],
+                            [Blockly.Msg.HORNAMPLIFIER_FART1, 'R_fart1'],
+                            [Blockly.Msg.HORNAMPLIFIER_FART2, 'R_fart2'],
+                            [Blockly.Msg.HORNAMPLIFIER_FART3, 'R_fart3']
                         ]
                     }
                 ],

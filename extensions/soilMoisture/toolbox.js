@@ -7,6 +7,18 @@ function registerToolboxs() {
     <block type="soilMoisture_init" id="soilMoisture_init">
         <field name="PIN">32</field>
     </block>
+    <block type="soilMoisture_calibrate" id="soilMoisture_calibrate">
+        <value name="DRYVALUE">
+            <shadow type="math_whole_number">
+                <field name="NUM">4095</field>
+            </shadow>
+        </value>
+        <value name="WETVALUE">
+            <shadow type="math_whole_number">
+                <field name="NUM">0</field>
+            </shadow>
+        </value>
+    </block>
     <block type="soilMoisture_readValue" id="soilMoisture_readValue">
     </block>
     <block type="soilMoisture_readPercent" id="soilMoisture_readPercent">

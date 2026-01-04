@@ -42,6 +42,27 @@ function registerBlocks (Blockly) {
         }
     };
 
+    Blockly.Blocks.soilMoisture_calibrate = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.SOILMOISTURE_CALIBRATE,
+                args0: [
+                    {
+                        type: 'input_value',
+                        name: 'DRYVALUE'
+                    },
+                    {
+                        type: 'input_value',
+                        name: 'WETVALUE'
+                    }
+                ],
+                colour: colour,
+                secondaryColour: secondaryColour,
+                extensions: ['shape_statement']
+            });
+        }
+    };
+
     Blockly.Blocks.soilMoisture_readValue = {
         init: function () {
             this.jsonInit({

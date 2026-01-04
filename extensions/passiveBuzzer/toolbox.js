@@ -19,6 +19,8 @@ function registerToolboxs () {
     </block>
     <block type="passiveBuzzer_playRingtone" id="passiveBuzzer_playRingtone">
     </block>
+    <block type="passiveBuzzer_playMusic" id="passiveBuzzer_playMusic">
+    </block>
 </category>`;
 }
 

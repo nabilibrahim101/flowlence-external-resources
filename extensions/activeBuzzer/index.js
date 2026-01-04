@@ -1,28 +1,26 @@
-const passiveBuzzer = formatMessage => ({
+const activeBuzzer = formatMessage => ({
     name: formatMessage({
-        id: 'passiveBuzzer.name',
-        default: 'Passive Buzzer'
+        id: 'activeBuzzer.name',
+        default: 'Active Buzzer'
     }),
-    extensionId: 'passiveBuzzer',
+    extensionId: 'activeBuzzer',
     version: '1.0.0',
     supportDevice: ['arduinoUno', 'arduinoNano', 'arduinoLeonardo',
         'arduinoMega2560', 'arduinoEsp8266', 'arduinoEsp32'],
     author: 'Flowlence',
-    iconURL: `assets/passiveBuzzer.jpg`,
+    iconURL: `assets/activeBuzzer.jpg`,
     description: formatMessage({
-        id: 'passiveBuzzer.description',
-        default: 'Unlike the active buzzer, the passive buzzer can be used to make different tones of sound and play some ringtones.' // eslint-disable-line max-len
+        id: 'activeBuzzer.description',
+        default: 'Active buzzer with built-in oscillator. Simple ON/OFF control for alarms and notifications.'
     }),
     featured: true,
-    main: 'main.js',
     blocks: 'blocks.js',
     generator: 'generator.js',
     toolbox: 'toolbox.js',
     translations: 'translations.js',
-    library: 'lib',
     official: false,
     tags: ['actuator'],
     helpLink: 'https://wiki.openblock.cc'
 });
 
-module.exports = passiveBuzzer;
+module.exports = activeBuzzer;

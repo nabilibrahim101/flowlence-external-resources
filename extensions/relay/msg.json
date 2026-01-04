@@ -1,0 +1,4 @@
+{
+    "relay.name": "Relay",
+    "relay.description": "Control relay module for switching high-power devices."
+}

@@ -161,7 +161,14 @@ function registerBlocksMessages (Blockly) {
             "PASSIVEBUZZER_SETTEMPO": "set tempo to (bpm) %1",
             "PASSIVEBUZZER_SLEEPING": "sleeping",
             "PASSIVEBUZZER_SUPERHAPPY": "super happy",
-            "PASSIVEBUZZER_SURPRISE": "surprise"
+            "PASSIVEBUZZER_SURPRISE": "surprise",
+            "PASSIVEBUZZER_PLAYMUSIC": "play music %1",
+            "PASSIVEBUZZER_MUSIC_BIRTHDAY": "Birthday",
+            "PASSIVEBUZZER_MUSIC_TETRIS": "Tetris",
+            "PASSIVEBUZZER_MUSIC_ODETOJOY": "Ode to Joy",
+            "PASSIVEBUZZER_MUSIC_CHRISTMAS": "Christmas",
+            "PASSIVEBUZZER_MUSIC_SUPERMARIO": "Super Mario",
+            "PASSIVEBUZZER_MUSIC_STARWARS": "Star Wars"
         }
     );
 
@@ -219,7 +226,14 @@ function registerBlocksMessages (Blockly) {
             "PASSIVEBUZZER_SETTEMPO": "设置节奏为 (bpm) %1",
             "PASSIVEBUZZER_SLEEPING": "正在睡觉",
             "PASSIVEBUZZER_SUPERHAPPY": "非常开心",
-            "PASSIVEBUZZER_SURPRISE": "惊讶"
+            "PASSIVEBUZZER_SURPRISE": "惊讶",
+            "PASSIVEBUZZER_PLAYMUSIC": "播放音乐 %1",
+            "PASSIVEBUZZER_MUSIC_BIRTHDAY": "生日快乐",
+            "PASSIVEBUZZER_MUSIC_TETRIS": "俄罗斯方块",
+            "PASSIVEBUZZER_MUSIC_ODETOJOY": "欢乐颂",
+            "PASSIVEBUZZER_MUSIC_CHRISTMAS": "圣诞歌",
+            "PASSIVEBUZZER_MUSIC_SUPERMARIO": "超级马里奥",
+            "PASSIVEBUZZER_MUSIC_STARWARS": "星球大战"
         }
     );
 
@@ -248,7 +262,54 @@ function registerBlocksMessages (Blockly) {
             "PASSIVEBUZZER_SETTEMPO": "設置節奏為 (bpm) %1",
             "PASSIVEBUZZER_SLEEPING": "正在睡覺",
             "PASSIVEBUZZER_SUPERHAPPY": "非常開心",
-            "PASSIVEBUZZER_SURPRISE": "驚訝"
+            "PASSIVEBUZZER_SURPRISE": "驚訝",
+            "PASSIVEBUZZER_PLAYMUSIC": "播放音樂 %1",
+            "PASSIVEBUZZER_MUSIC_BIRTHDAY": "生日快樂",
+            "PASSIVEBUZZER_MUSIC_TETRIS": "俄羅斯方塊",
+            "PASSIVEBUZZER_MUSIC_ODETOJOY": "歡樂頌",
+            "PASSIVEBUZZER_MUSIC_CHRISTMAS": "聖誕歌",
+            "PASSIVEBUZZER_MUSIC_SUPERMARIO": "超級瑪利歐",
+            "PASSIVEBUZZER_MUSIC_STARWARS": "星球大戰"
+        }
+    );
+
+    // Initialize ar locale if it doesn't exist
+    if (!Blockly.ScratchMsgs.locales["ar"]) {
+        Blockly.ScratchMsgs.locales["ar"] = {};
+    }
+    Object.assign(Blockly.ScratchMsgs.locales["ar"],
+        {
+            "PASSIVEBUZZER_CATEGORY": "جرس سلبي",
+            "PASSIVEBUZZER_CONFUSED": "مرتبك",
+            "PASSIVEBUZZER_CONNECTION": "اتصال",
+            "PASSIVEBUZZER_CUDDLY": "لطيف",
+            "PASSIVEBUZZER_DIDI": "ضغط زر",
+            "PASSIVEBUZZER_DISCONNECTION": "قطع اتصال",
+            "PASSIVEBUZZER_FART1": "ضراط 1",
+            "PASSIVEBUZZER_FART2": "ضراط 2",
+            "PASSIVEBUZZER_FART3": "ضراط 3",
+            "PASSIVEBUZZER_HAPPY": "سعيد",
+            "PASSIVEBUZZER_HAPPYSHORT": "سعيد قصير",
+            "PASSIVEBUZZER_INIT": "تهيئة منفذ الجرس السلبي %1",
+            "PASSIVEBUZZER_MODE1": "الوضع 1",
+            "PASSIVEBUZZER_MODE2": "الوضع 2",
+            "PASSIVEBUZZER_MODE3": "الوضع 3",
+            "PASSIVEBUZZER_OHOOH": "أوه أوه",
+            "PASSIVEBUZZER_OHOOH2": "أوه أوه 2",
+            "PASSIVEBUZZER_PLAYRINGTONE": "تشغيل نغمة %1",
+            "PASSIVEBUZZER_PLAYTONEFORBEAT": "تشغيل نغمة %1 لمدة %2 ضربة",
+            "PASSIVEBUZZER_SAD": "حزين",
+            "PASSIVEBUZZER_SETTEMPO": "ضبط الإيقاع (bpm) %1",
+            "PASSIVEBUZZER_SLEEPING": "نائم",
+            "PASSIVEBUZZER_SUPERHAPPY": "سعيد جداً",
+            "PASSIVEBUZZER_SURPRISE": "مفاجأة",
+            "PASSIVEBUZZER_PLAYMUSIC": "تشغيل موسيقى %1",
+            "PASSIVEBUZZER_MUSIC_BIRTHDAY": "عيد ميلاد",
+            "PASSIVEBUZZER_MUSIC_TETRIS": "تتريس",
+            "PASSIVEBUZZER_MUSIC_ODETOJOY": "نشيد الفرح",
+            "PASSIVEBUZZER_MUSIC_CHRISTMAS": "عيد الميلاد",
+            "PASSIVEBUZZER_MUSIC_SUPERMARIO": "سوبر ماريو",
+            "PASSIVEBUZZER_MUSIC_STARWARS": "حرب النجوم"
         }
     );
 

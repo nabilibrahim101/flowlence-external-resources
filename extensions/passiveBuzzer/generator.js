@@ -31,6 +31,21 @@ function registerGenerators (Blockly) {
         return `my_buzzer.playRingtone(${no});\n`;
     };
 
+    // Play Music generator (ESP32 only - uses musicESP32 library)
+    Blockly.Arduino.passiveBuzzer_playMusic = function (block) {
+        const music = block.getFieldValue('MUSIC');
+
+        // Get pin from init block - default to IO0 if not found
+        const pin = Blockly.Arduino.definitions_.passiveBuzzer_init ?
+            Blockly.Arduino.definitions_.passiveBuzzer_init.match(/Buzzer my_buzzer\((\d+)\)/)?.[1] || '0' : '0';
+
+        // ESP32 Arduino Core 3.x has built-in tone()/noTone(), no need for ESP32Tone
+        Blockly.Arduino.includes_.passiveBuzzer_music = `#include <musicESP32.h>`;
+        Blockly.Arduino.definitions_.passiveBuzzer_music = `music Music(${pin});`;
+
+        return `Music.${music}();\n`;
+    };
+
     Blockly.Arduino['passiveBuzzer_custom_math_whole_number'] = Blockly.Arduino['math_number'];
 
     return Blockly;

@@ -7,6 +7,13 @@ function registerToolboxs () {
     <block type="waterLevel_init" id="waterLevel_init">
         <field name="PIN">32</field>
     </block>
+    <block type="waterLevel_setMaxValue" id="waterLevel_setMaxValue">
+        <value name="MAXVALUE">
+            <shadow type="math_whole_number">
+                <field name="NUM">1400</field>
+            </shadow>
+        </value>
+    </block>
     <block type="waterLevel_readValue" id="waterLevel_readValue">
     </block>
     <block type="waterLevel_readPercent" id="waterLevel_readPercent">

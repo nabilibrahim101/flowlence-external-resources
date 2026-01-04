@@ -1,20 +1,19 @@
-const passiveBuzzer = formatMessage => ({
+const hornAmplifier = formatMessage => ({
     name: formatMessage({
-        id: 'passiveBuzzer.name',
-        default: 'Passive Buzzer'
+        id: 'hornAmplifier.name',
+        default: 'Horn Buzzer Amplifier'
     }),
-    extensionId: 'passiveBuzzer',
+    extensionId: 'hornAmplifier',
     version: '1.0.0',
     supportDevice: ['arduinoUno', 'arduinoNano', 'arduinoLeonardo',
         'arduinoMega2560', 'arduinoEsp8266', 'arduinoEsp32'],
     author: 'Flowlence',
-    iconURL: `assets/passiveBuzzer.jpg`,
+    iconURL: `assets/hornAmplifier.jpg`,
     description: formatMessage({
-        id: 'passiveBuzzer.description',
-        default: 'Unlike the active buzzer, the passive buzzer can be used to make different tones of sound and play some ringtones.' // eslint-disable-line max-len
+        id: 'hornAmplifier.description',
+        default: 'Horn 8002b audio power amplifier module. Louder passive buzzer for melodies and sound effects.'
     }),
     featured: true,
-    main: 'main.js',
     blocks: 'blocks.js',
     generator: 'generator.js',
     toolbox: 'toolbox.js',
@@ -25,4 +24,4 @@ const passiveBuzzer = formatMessage => ({
     helpLink: 'https://wiki.openblock.cc'
 });
 
-module.exports = passiveBuzzer;
+module.exports = hornAmplifier;

@@ -6,8 +6,15 @@ function registerGenerators (Blockly) {
     Blockly.Arduino.waterLevel_init = function (block) {
         const pin = block.getFieldValue('PIN');
         Blockly.Arduino.definitions_.waterLevel_pin = `const int waterLevelPin = ${pin};`;
+        Blockly.Arduino.definitions_.waterLevel_maxValue = `int waterLevelMaxValue = 1400;`;
         Blockly.Arduino.setups_.waterLevel_init = `pinMode(waterLevelPin, INPUT);`;
         return '';
+    };
+
+    Blockly.Arduino.waterLevel_setMaxValue = function (block) {
+        const maxValue = Blockly.Arduino.valueToCode(block, 'MAXVALUE', Blockly.Arduino.ORDER_ATOMIC) || '1400';
+        const code = `waterLevelMaxValue = ${maxValue};\n`;
+        return code;
     };
 
     Blockly.Arduino.waterLevel_readValue = function () {
@@ -19,9 +26,8 @@ function registerGenerators (Blockly) {
         Blockly.Arduino.definitions_.waterLevel_percent = `
 int getWaterLevelPercent() {
     int value = analogRead(waterLevelPin);
-    // Higher water level = higher analog reading
-    // ESP32: 0-4095, Arduino: 0-1023
-    int percent = map(value, 0, 4095, 0, 100);
+    // Map using calibrated max value
+    int percent = map(value, 0, waterLevelMaxValue, 0, 100);
     return constrain(percent, 0, 100);
 }`;
         const code = `getWaterLevelPercent()`;
@@ -33,7 +39,7 @@ int getWaterLevelPercent() {
         Blockly.Arduino.definitions_.waterLevel_percent = `
 int getWaterLevelPercent() {
     int value = analogRead(waterLevelPin);
-    int percent = map(value, 0, 4095, 0, 100);
+    int percent = map(value, 0, waterLevelMaxValue, 0, 100);
     return constrain(percent, 0, 100);
 }`;
         const code = `(getWaterLevelPercent() < ${threshold})`;

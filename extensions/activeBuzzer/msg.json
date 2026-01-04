@@ -1,0 +1,9 @@
+{
+    "ACTIVEBUZZER_CATEGORY": "Active Buzzer",
+    "ACTIVEBUZZER_INIT": "initialize active buzzer pin %1",
+    "ACTIVEBUZZER_SETSTATE": "set buzzer %1",
+    "ACTIVEBUZZER_ON": "ON",
+    "ACTIVEBUZZER_OFF": "OFF",
+    "ACTIVEBUZZER_BEEP": "beep for %1 ms",
+    "ACTIVEBUZZER_BEEPTIMES": "beep %1 times, %2 ms on, %3 ms off"
+}
