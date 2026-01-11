@@ -12,11 +12,19 @@ function registerBlocks (Blockly) {
                 args0: [
                     {
                         type: 'field_dropdown',
+                        name: 'axis',
+                        options: [
+                            [Blockly.Msg.ADXL345_X_AXIS || 'X-Accel', 'X'],
+                            [Blockly.Msg.ADXL345_Y_AXIS || 'Y-Accel', 'Y'],
+                            [Blockly.Msg.ADXL345_Z_AXIS || 'Z-Accel', 'Z']
+                        ]
+                    },
+                    {
+                        type: 'field_dropdown',
                         name: 'unit',
                         options: [
-                            ['X-Accel', 'accel.getAccelerationX()'],
-                            ['Y-Accel', 'accel.getAccelerationY()'],
-                            ['Z-Accel', 'accel.getAccelerationZ()']
+                            [Blockly.Msg.ADXL345_UNIT_G || 'g-force', 'g'],
+                            [Blockly.Msg.ADXL345_UNIT_RAW || 'raw', 'raw']
                         ]
                     }
                 ],
