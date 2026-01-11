@@ -1,24 +1,25 @@
-const led = formatMessage => ({
+const adxl345 = formatMessage => ({
     name: formatMessage({
-        id: 'led.name',
-        default: 'LED'
+        id: 'adxl345.name',
+        default: 'ADXL345 Acceleration Sensor'
     }),
-    extensionId: 'led',
+    extensionId: 'adxl345',
     version: '1.0.0',
     supportDevice: ['arduinoUno', 'arduinoNano', 'arduinoMega2560', 'arduinoEsp32', 'arduinoEsp8266'],
     author: 'Flowlence',
-    iconURL: `assets/LED.jpg`,
+    iconURL: `assets/adxl345.jpg`,
     description: formatMessage({
-        id: 'led.description',
-        default: 'Control LEDs - turn on, off, toggle, and blink.'
+        id: 'adxl345.description',
+        default: 'ADXL345 3-axis digital accelerometer sensor (I2C).'
     }),
     featured: true,
     blocks: 'blocks.js',
     generator: 'generator.js',
     toolbox: 'toolbox.js',
     translations: 'translations.js',
+    library: 'lib',
     official: false,
-    tags: ['actuator']
+    tags: ['sensor']
 });
 
-module.exports = led;
+module.exports = adxl345;

@@ -1,16 +1,16 @@
-const led = formatMessage => ({
+const lightSensor = formatMessage => ({
     name: formatMessage({
-        id: 'led.name',
-        default: 'LED'
+        id: 'lightSensor.name',
+        default: 'Light Sensor (Photoresistance)'
     }),
-    extensionId: 'led',
+    extensionId: 'lightSensor',
     version: '1.0.0',
     supportDevice: ['arduinoUno', 'arduinoNano', 'arduinoMega2560', 'arduinoEsp32', 'arduinoEsp8266'],
     author: 'Flowlence',
-    iconURL: `assets/LED.jpg`,
+    iconURL: `assets/lightSensor.jpg`,
     description: formatMessage({
-        id: 'led.description',
-        default: 'Control LEDs - turn on, off, toggle, and blink.'
+        id: 'lightSensor.description',
+        default: 'Photoresistance sensor for measuring light intensity.'
     }),
     featured: true,
     blocks: 'blocks.js',
@@ -18,7 +18,7 @@ const led = formatMessage => ({
     toolbox: 'toolbox.js',
     translations: 'translations.js',
     official: false,
-    tags: ['actuator']
+    tags: ['sensor']
 });
 
-module.exports = led;
+module.exports = lightSensor;

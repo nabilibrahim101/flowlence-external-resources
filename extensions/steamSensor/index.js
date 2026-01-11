@@ -1,16 +1,16 @@
-const led = formatMessage => ({
+const steamSensor = formatMessage => ({
     name: formatMessage({
-        id: 'led.name',
-        default: 'LED'
+        id: 'steamSensor.name',
+        default: 'Steam Sensor (Rain Detector)'
     }),
-    extensionId: 'led',
+    extensionId: 'steamSensor',
     version: '1.0.0',
     supportDevice: ['arduinoUno', 'arduinoNano', 'arduinoMega2560', 'arduinoEsp32', 'arduinoEsp8266'],
     author: 'Flowlence',
-    iconURL: `assets/LED.jpg`,
+    iconURL: `assets/steamSensor.png`,
     description: formatMessage({
-        id: 'led.description',
-        default: 'Control LEDs - turn on, off, toggle, and blink.'
+        id: 'steamSensor.description',
+        default: 'Analog sensor for detecting water vapor, steam, and rain droplets.'
     }),
     featured: true,
     blocks: 'blocks.js',
@@ -18,7 +18,7 @@ const led = formatMessage => ({
     toolbox: 'toolbox.js',
     translations: 'translations.js',
     official: false,
-    tags: ['actuator']
+    tags: ['sensor']
 });
 
-module.exports = led;
+module.exports = steamSensor;
