@@ -12,17 +12,8 @@ function registerBlocks (Blockly) {
     Blockly.Blocks.steamSensor_readValue = {
         init: function () {
             this.jsonInit({
-                message0: '%1',
-                message1: Blockly.Msg.STEAMSENSOR_READ_VALUE,
+                message0: Blockly.Msg.STEAMSENSOR_READ_VALUE,
                 args0: [
-                    {
-                        type: 'field_image',
-                        src: `${Blockly.mainWorkspace.options.pathToMedia}extensions/steamSensor/assets/steamSensor.png`,
-                        width: 50,
-                        height: 27
-                    }
-                ],
-                args1: [
                     {
                         type: 'field_dropdown',
                         name: 'pin',
@@ -31,7 +22,7 @@ function registerBlocks (Blockly) {
                 ],
                 colour: colour,
                 secondaryColour: secondaryColour,
-                extensions: ['output_number', 'shape_statement']
+                extensions: ['output_number']
             });
         }
     };
