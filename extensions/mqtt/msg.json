@@ -1,0 +1,10 @@
+{
+    "MQTT_CATEGORY": "MQTT",
+    "MQTT_CONNECT": "%1 connect to broker %2 port %3 client ID %4",
+    "MQTT_CONNECT_AUTH": "%1 connect to broker %2 port %3 client ID %4 user %5 password %6",
+    "MQTT_PUBLISH": "%1 publish to topic %2 message %3",
+    "MQTT_SUBSCRIBE": "%1 subscribe to topic %2",
+    "MQTT_IS_CONNECTED": "%1 is connected?",
+    "MQTT_LOOP": "%1 MQTT loop",
+    "MQTT_DISCONNECT": "%1 disconnect"
+}
