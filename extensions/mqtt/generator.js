@@ -22,8 +22,8 @@ function registerGenerators (Blockly) {
         // Setup MQTT in setup()
         Blockly.Arduino.setups_.mqtt_setup = `mqttClient.setServer(mqtt_server, mqtt_port);`;
 
-        // Generate connection code
-        const code = `if (!mqttClient.connected()) {\n  mqttClient.connect(mqtt_clientId);\n}\n`;
+        // Generate connection code (only connect if WiFi is ready)
+        const code = `if (WiFi.status() == WL_CONNECTED && !mqttClient.connected()) {\n  mqttClient.connect(mqtt_clientId);\n}\n`;
         return code;
     };
 
@@ -50,8 +50,8 @@ function registerGenerators (Blockly) {
         // Setup MQTT in setup()
         Blockly.Arduino.setups_.mqtt_setup = `mqttClient.setServer(mqtt_server, mqtt_port);`;
 
-        // Generate connection code with auth
-        const code = `if (!mqttClient.connected()) {\n  mqttClient.connect(mqtt_clientId, mqtt_username, mqtt_password);\n}\n`;
+        // Generate connection code with auth (only connect if WiFi is ready)
+        const code = `if (WiFi.status() == WL_CONNECTED && !mqttClient.connected()) {\n  mqttClient.connect(mqtt_clientId, mqtt_username, mqtt_password);\n}\n`;
         return code;
     };
 
