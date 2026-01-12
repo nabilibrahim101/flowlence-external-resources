@@ -1,0 +1,8 @@
+{
+    "HTTP_CATEGORY": "HTTP",
+    "HTTP_GET": "%1 GET %2",
+    "HTTP_POST": "%1 POST %2 body %3",
+    "HTTP_PUT": "%1 PUT %2 body %3",
+    "HTTP_DELETE": "%1 DELETE %2",
+    "HTTP_RESPONSE_CODE": "%1 response code"
+}
