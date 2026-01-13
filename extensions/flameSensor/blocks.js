@@ -18,11 +18,11 @@ function registerBlocks (Blockly) {
         ['GPIO 39', '39']
     ];
 
-    // Initialize flame sensor with analog pin
-    Blockly.Blocks.flameSensor_init = {
+    // Read flame sensor value (analog)
+    Blockly.Blocks.flameSensor_read = {
         init: function () {
             this.jsonInit({
-                message0: Blockly.Msg.FLAMESENSOR_INIT || '%1 init flame sensor pin %2',
+                message0: Blockly.Msg.FLAMESENSOR_READ || '%1 flame sensor %2 value',
                 args0: [
                     {
                         type: 'field_image',
@@ -40,28 +40,6 @@ function registerBlocks (Blockly) {
                 ],
                 colour: colour,
                 secondaryColour: secondaryColour,
-                extensions: ['shape_statement']
-            });
-        }
-    };
-
-    // Read flame sensor value (analog)
-    Blockly.Blocks.flameSensor_read = {
-        init: function () {
-            this.jsonInit({
-                message0: Blockly.Msg.FLAMESENSOR_READ || '%1 flame sensor value',
-                args0: [
-                    {
-                        type: 'field_image',
-                        src: flameSensorIconUrl,
-                        width: 24,
-                        height: 24,
-                        alt: 'Flame Sensor',
-                        flip_rtl: false
-                    }
-                ],
-                colour: colour,
-                secondaryColour: secondaryColour,
                 extensions: ['output_number']
             });
         }
@@ -71,7 +49,7 @@ function registerBlocks (Blockly) {
     Blockly.Blocks.flameSensor_detected = {
         init: function () {
             this.jsonInit({
-                message0: Blockly.Msg.FLAMESENSOR_DETECTED || '%1 flame detected?',
+                message0: Blockly.Msg.FLAMESENSOR_DETECTED || '%1 flame detected %2 ?',
                 args0: [
                     {
                         type: 'field_image',
@@ -80,6 +58,11 @@ function registerBlocks (Blockly) {
                         height: 24,
                         alt: 'Flame Sensor',
                         flip_rtl: false
+                    },
+                    {
+                        type: 'field_dropdown',
+                        name: 'PIN',
+                        options: analogPins
                     }
                 ],
                 colour: colour,

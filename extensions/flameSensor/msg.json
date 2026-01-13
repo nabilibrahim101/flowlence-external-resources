@@ -1,6 +1,5 @@
 {
     "FLAMESENSOR_CATEGORY": "Flame Sensor",
-    "FLAMESENSOR_INIT": "%1 init flame sensor pin %2",
-    "FLAMESENSOR_READ": "%1 flame sensor value",
-    "FLAMESENSOR_DETECTED": "%1 flame detected?"
+    "FLAMESENSOR_READ": "%1 flame sensor %2 value",
+    "FLAMESENSOR_DETECTED": "%1 flame detected %2 ?"
 }

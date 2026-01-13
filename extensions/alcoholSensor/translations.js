@@ -30,18 +30,16 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {
             "ALCOHOLSENSOR_CATEGORY": "Alcohol Sensor",
-            "ALCOHOLSENSOR_INIT": "%1 init alcohol sensor pin %2",
-            "ALCOHOLSENSOR_READ": "%1 alcohol sensor value",
-            "ALCOHOLSENSOR_DETECTED": "%1 alcohol detected?"
+            "ALCOHOLSENSOR_READ": "%1 alcohol sensor %2 value",
+            "ALCOHOLSENSOR_DETECTED": "%1 alcohol detected %2 ?"
         }
     );
 
     Object.assign(Blockly.ScratchMsgs.locales["zh-cn"],
         {
             "ALCOHOLSENSOR_CATEGORY": "酒精传感器",
-            "ALCOHOLSENSOR_INIT": "%1 初始化酒精传感器引脚 %2",
-            "ALCOHOLSENSOR_READ": "%1 酒精传感器值",
-            "ALCOHOLSENSOR_DETECTED": "%1 检测到酒精？"
+            "ALCOHOLSENSOR_READ": "%1 酒精传感器 %2 值",
+            "ALCOHOLSENSOR_DETECTED": "%1 检测到酒精 %2 ？"
         }
     );
 
@@ -52,9 +50,8 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["ar"],
         {
             "ALCOHOLSENSOR_CATEGORY": "مستشعر الكحول",
-            "ALCOHOLSENSOR_INIT": "%1 تهيئة مستشعر الكحول المنفذ %2",
-            "ALCOHOLSENSOR_READ": "%1 قيمة مستشعر الكحول",
-            "ALCOHOLSENSOR_DETECTED": "%1 هل تم اكتشاف كحول؟"
+            "ALCOHOLSENSOR_READ": "%1 قيمة مستشعر الكحول %2",
+            "ALCOHOLSENSOR_DETECTED": "%1 هل تم اكتشاف كحول %2 ؟"
         }
     );
 

@@ -18,11 +18,11 @@ function registerBlocks (Blockly) {
         ['GPIO 39', '39']
     ];
 
-    // Initialize gas sensor with analog pin
-    Blockly.Blocks.gasSensor_init = {
+    // Read gas sensor value (analog)
+    Blockly.Blocks.gasSensor_read = {
         init: function () {
             this.jsonInit({
-                message0: Blockly.Msg.GASSENSOR_INIT || '%1 init gas sensor pin %2',
+                message0: Blockly.Msg.GASSENSOR_READ || '%1 gas sensor %2 value',
                 args0: [
                     {
                         type: 'field_image',
@@ -40,28 +40,6 @@ function registerBlocks (Blockly) {
                 ],
                 colour: colour,
                 secondaryColour: secondaryColour,
-                extensions: ['shape_statement']
-            });
-        }
-    };
-
-    // Read gas sensor value (analog)
-    Blockly.Blocks.gasSensor_read = {
-        init: function () {
-            this.jsonInit({
-                message0: Blockly.Msg.GASSENSOR_READ || '%1 gas sensor value',
-                args0: [
-                    {
-                        type: 'field_image',
-                        src: gasSensorIconUrl,
-                        width: 24,
-                        height: 24,
-                        alt: 'Gas Sensor',
-                        flip_rtl: false
-                    }
-                ],
-                colour: colour,
-                secondaryColour: secondaryColour,
                 extensions: ['output_number']
             });
         }
@@ -71,7 +49,7 @@ function registerBlocks (Blockly) {
     Blockly.Blocks.gasSensor_detected = {
         init: function () {
             this.jsonInit({
-                message0: Blockly.Msg.GASSENSOR_DETECTED || '%1 gas detected?',
+                message0: Blockly.Msg.GASSENSOR_DETECTED || '%1 gas detected %2 ?',
                 args0: [
                     {
                         type: 'field_image',
@@ -80,6 +58,11 @@ function registerBlocks (Blockly) {
                         height: 24,
                         alt: 'Gas Sensor',
                         flip_rtl: false
+                    },
+                    {
+                        type: 'field_dropdown',
+                        name: 'PIN',
+                        options: analogPins
                     }
                 ],
                 colour: colour,

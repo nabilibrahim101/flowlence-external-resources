@@ -18,11 +18,11 @@ function registerBlocks (Blockly) {
         ['GPIO 39', '39']
     ];
 
-    // Initialize alcohol sensor with analog pin
-    Blockly.Blocks.alcoholSensor_init = {
+    // Read alcohol sensor value (analog)
+    Blockly.Blocks.alcoholSensor_read = {
         init: function () {
             this.jsonInit({
-                message0: Blockly.Msg.ALCOHOLSENSOR_INIT || '%1 init alcohol sensor pin %2',
+                message0: Blockly.Msg.ALCOHOLSENSOR_READ || '%1 alcohol sensor %2 value',
                 args0: [
                     {
                         type: 'field_image',
@@ -40,28 +40,6 @@ function registerBlocks (Blockly) {
                 ],
                 colour: colour,
                 secondaryColour: secondaryColour,
-                extensions: ['shape_statement']
-            });
-        }
-    };
-
-    // Read alcohol sensor value (analog)
-    Blockly.Blocks.alcoholSensor_read = {
-        init: function () {
-            this.jsonInit({
-                message0: Blockly.Msg.ALCOHOLSENSOR_READ || '%1 alcohol sensor value',
-                args0: [
-                    {
-                        type: 'field_image',
-                        src: alcoholSensorIconUrl,
-                        width: 24,
-                        height: 24,
-                        alt: 'Alcohol Sensor',
-                        flip_rtl: false
-                    }
-                ],
-                colour: colour,
-                secondaryColour: secondaryColour,
                 extensions: ['output_number']
             });
         }
@@ -71,7 +49,7 @@ function registerBlocks (Blockly) {
     Blockly.Blocks.alcoholSensor_detected = {
         init: function () {
             this.jsonInit({
-                message0: Blockly.Msg.ALCOHOLSENSOR_DETECTED || '%1 alcohol detected?',
+                message0: Blockly.Msg.ALCOHOLSENSOR_DETECTED || '%1 alcohol detected %2 ?',
                 args0: [
                     {
                         type: 'field_image',
@@ -80,6 +58,11 @@ function registerBlocks (Blockly) {
                         height: 24,
                         alt: 'Alcohol Sensor',
                         flip_rtl: false
+                    },
+                    {
+                        type: 'field_dropdown',
+                        name: 'PIN',
+                        options: analogPins
                     }
                 ],
                 colour: colour,
