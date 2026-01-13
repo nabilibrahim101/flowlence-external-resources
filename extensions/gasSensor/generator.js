@@ -5,13 +5,10 @@ function registerGenerators (Blockly) {
 
     Blockly.Arduino.gasSensor_read = function (block) {
         const pin = block.getFieldValue('PIN') || '34';
-        const pinNum = parseInt(pin, 10);
-
-        // ESP32 analog-capable pins: 32, 33, 34, 35, 36, 39
-        const analogPins = [32, 33, 34, 35, 36, 39];
+        const mode = block.getFieldValue('MODE') || 'ANALOG';
 
         let code;
-        if (analogPins.includes(pinNum)) {
+        if (mode === 'ANALOG') {
             // Analog read: returns 0-4095
             code = `analogRead(${pin})`;
         } else {
