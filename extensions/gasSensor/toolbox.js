@@ -7,9 +7,6 @@ function registerToolboxs () {
     <block type="gasSensor_read" id="gasSensor_read">
         <field name="PIN">34</field>
     </block>
-    <block type="gasSensor_detected" id="gasSensor_detected">
-        <field name="PIN">34</field>
-    </block>
 </category>`;
 }
 

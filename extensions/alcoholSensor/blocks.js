@@ -5,8 +5,8 @@ function registerBlocks (Blockly) {
     const colour = '#9C27B0';
     const secondaryColour = '#7B1FA2';
 
-    // Alcohol sensor icon - bottle/droplet shape
-    const alcoholSensorIconUrl = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xMiAyYy0yIDQtNiA4LTYgMTJhNiA2IDAgMCAwIDEyIDBjMC00LTQtOC02LTEyeiIvPjxwYXRoIGQ9Ik0xMiAxNHYyIi8+PHBhdGggZD0iTTEyIDE4aC4wMSIvPjwvc3ZnPg==';
+    // Alcohol sensor icon - Lucide wine bottle
+    const alcoholSensorIconUrl = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBkPSJNMTAgM2ExIDEgMCAwIDEgMS0xaDJhMSAxIDAgMCAxIDEgMXYyYTYgNiAwIDAgMCAxLjIgMy42bC42LjhBNiA2IDAgMCAxIDE3IDEzdjhhMSAxIDAgMCAxLTEgMUg4YTEgMSAwIDAgMS0xLTF2LThhNiA2IDAgMCAxIDEuMi0zLjZsLjYtLjhBNiA2IDAgMCAwIDEwIDV6Ii8+PHBhdGggZD0iTTE3IDEzaC00YTEgMSAwIDAgMC0xIDF2M2ExIDEgMCAwIDAgMSAxaDQiLz48L3N2Zz4=';
 
     // ESP32 analog pins
     const analogPins = [
@@ -41,33 +41,6 @@ function registerBlocks (Blockly) {
                 colour: colour,
                 secondaryColour: secondaryColour,
                 extensions: ['output_number']
-            });
-        }
-    };
-
-    // Alcohol detected (boolean - high value means alcohol detected)
-    Blockly.Blocks.alcoholSensor_detected = {
-        init: function () {
-            this.jsonInit({
-                message0: Blockly.Msg.ALCOHOLSENSOR_DETECTED || '%1 alcohol detected %2 ?',
-                args0: [
-                    {
-                        type: 'field_image',
-                        src: alcoholSensorIconUrl,
-                        width: 24,
-                        height: 24,
-                        alt: 'Alcohol Sensor',
-                        flip_rtl: false
-                    },
-                    {
-                        type: 'field_dropdown',
-                        name: 'PIN',
-                        options: analogPins
-                    }
-                ],
-                colour: colour,
-                secondaryColour: secondaryColour,
-                extensions: ['output_boolean']
             });
         }
     };

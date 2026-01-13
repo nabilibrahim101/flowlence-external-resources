@@ -5,8 +5,8 @@ function registerBlocks (Blockly) {
     const colour = '#FF5722';
     const secondaryColour = '#E64A19';
 
-    // Flame sensor icon - flame shape
-    const flameSensorIconUrl = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xMiAyYy0yIDQtNiA2LTYgMTBhNiA2IDAgMCAwIDEyIDBjMC00LTQtNi02LTEweiIvPjxwYXRoIGQ9Ik0xMiAxMmMtMSAyLTMgMy0zIDVhMyAzIDAgMCAwIDYgMGMwLTItMi0zLTMtNXoiLz48L3N2Zz4=';
+    // Flame sensor icon - Lucide flame
+    const flameSensorIconUrl = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBkPSJNMTIgM3ExIDQgNCA2LjV0MyA1LjVhMSAxIDAgMCAxLTE0IDAgNSA1IDAgMCAxIDEtMyAxIDEgMCAwIDAgNSAwYzAtMi0xLjUtMy0xLjUtNXEwLTIgMi41LTQiLz48L3N2Zz4=';
 
     // ESP32 analog pins
     const analogPins = [
@@ -41,33 +41,6 @@ function registerBlocks (Blockly) {
                 colour: colour,
                 secondaryColour: secondaryColour,
                 extensions: ['output_number']
-            });
-        }
-    };
-
-    // Flame detected (boolean - low value means flame detected)
-    Blockly.Blocks.flameSensor_detected = {
-        init: function () {
-            this.jsonInit({
-                message0: Blockly.Msg.FLAMESENSOR_DETECTED || '%1 flame detected %2 ?',
-                args0: [
-                    {
-                        type: 'field_image',
-                        src: flameSensorIconUrl,
-                        width: 24,
-                        height: 24,
-                        alt: 'Flame Sensor',
-                        flip_rtl: false
-                    },
-                    {
-                        type: 'field_dropdown',
-                        name: 'PIN',
-                        options: analogPins
-                    }
-                ],
-                colour: colour,
-                secondaryColour: secondaryColour,
-                extensions: ['output_boolean']
             });
         }
     };

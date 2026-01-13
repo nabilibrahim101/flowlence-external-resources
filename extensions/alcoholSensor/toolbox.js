@@ -7,9 +7,6 @@ function registerToolboxs () {
     <block type="alcoholSensor_read" id="alcoholSensor_read">
         <field name="PIN">34</field>
     </block>
-    <block type="alcoholSensor_detected" id="alcoholSensor_detected">
-        <field name="PIN">34</field>
-    </block>
 </category>`;
 }
 

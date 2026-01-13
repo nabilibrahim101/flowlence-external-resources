@@ -1,5 +1,4 @@
 {
     "GASSENSOR_CATEGORY": "Gas Sensor",
-    "GASSENSOR_READ": "%1 gas sensor %2 value",
-    "GASSENSOR_DETECTED": "%1 gas detected %2 ?"
+    "GASSENSOR_READ": "%1 gas sensor %2 value"
 }

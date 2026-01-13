@@ -7,9 +7,6 @@ function registerToolboxs () {
     <block type="flameSensor_read" id="flameSensor_read">
         <field name="PIN">34</field>
     </block>
-    <block type="flameSensor_detected" id="flameSensor_detected">
-        <field name="PIN">34</field>
-    </block>
 </category>`;
 }
 

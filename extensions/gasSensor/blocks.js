@@ -5,8 +5,8 @@ function registerBlocks (Blockly) {
     const colour = '#607D8B';
     const secondaryColour = '#455A64';
 
-    // Gas sensor icon - cloud/gas shape
-    const gasSensorIconUrl = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xOCAxMGgtMS4yNkEzIDMgMCAxIDAgOSA5aDlhMyAzIDAgMCAxIDAgNkg2YTMgMyAwIDEgMSAwLTZoMiIvPjxwYXRoIGQ9Ik0xMiAydjIiLz48cGF0aCBkPSJNMTIgMjB2MiIvPjwvc3ZnPg==';
+    // Gas sensor icon - Lucide fuel
+    const gasSensorIconUrl = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBkPSJNMTQgMTNoMmEyIDIgMCAwIDEgMiAydjJhMiAyIDAgMCAwIDQgMHYtNi45OThhMiAyIDAgMCAwLS41OS0xLjQyTDE4IDUiLz48cGF0aCBkPSJNMTQgMjFWNWEyIDIgMCAwIDAtMi0ySDVhMiAyIDAgMCAwLTIgMnYxNiIvPjxwYXRoIGQ9Ik0yIDIxaDEzIi8+PHBhdGggZD0iTTMgOWgxMSIvPjwvc3ZnPg==';
 
     // ESP32 analog pins
     const analogPins = [
@@ -41,33 +41,6 @@ function registerBlocks (Blockly) {
                 colour: colour,
                 secondaryColour: secondaryColour,
                 extensions: ['output_number']
-            });
-        }
-    };
-
-    // Gas detected (boolean - high value means gas detected)
-    Blockly.Blocks.gasSensor_detected = {
-        init: function () {
-            this.jsonInit({
-                message0: Blockly.Msg.GASSENSOR_DETECTED || '%1 gas detected %2 ?',
-                args0: [
-                    {
-                        type: 'field_image',
-                        src: gasSensorIconUrl,
-                        width: 24,
-                        height: 24,
-                        alt: 'Gas Sensor',
-                        flip_rtl: false
-                    },
-                    {
-                        type: 'field_dropdown',
-                        name: 'PIN',
-                        options: analogPins
-                    }
-                ],
-                colour: colour,
-                secondaryColour: secondaryColour,
-                extensions: ['output_boolean']
             });
         }
     };

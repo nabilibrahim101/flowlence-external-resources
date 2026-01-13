@@ -1,5 +1,4 @@
 {
     "FLAMESENSOR_CATEGORY": "Flame Sensor",
-    "FLAMESENSOR_READ": "%1 flame sensor %2 value",
-    "FLAMESENSOR_DETECTED": "%1 flame detected %2 ?"
+    "FLAMESENSOR_READ": "%1 flame sensor %2 value"
 }

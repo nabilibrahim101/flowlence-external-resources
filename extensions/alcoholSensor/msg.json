@@ -1,5 +1,4 @@
 {
     "ALCOHOLSENSOR_CATEGORY": "Alcohol Sensor",
-    "ALCOHOLSENSOR_READ": "%1 alcohol sensor %2 value",
-    "ALCOHOLSENSOR_DETECTED": "%1 alcohol detected %2 ?"
+    "ALCOHOLSENSOR_READ": "%1 alcohol sensor %2 value"
 }
