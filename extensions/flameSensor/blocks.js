@@ -8,17 +8,10 @@ function registerBlocks (Blockly) {
     // Flame sensor icon - Lucide flame
     const flameSensorIconUrl = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBkPSJNMTIgM3ExIDQgNCA2LjV0MyA1LjVhMSAxIDAgMCAxLTE0IDAgNSA1IDAgMCAxIDEtMyAxIDEgMCAwIDAgNSAwYzAtMi0xLjUtMy0xLjUtNXEwLTIgMi41LTQiLz48L3N2Zz4=';
 
-    // ESP32 analog pins
-    const analogPins = [
-        ['GPIO 32', '32'],
-        ['GPIO 33', '33'],
-        ['GPIO 34', '34'],
-        ['GPIO 35', '35'],
-        ['GPIO 36', '36'],
-        ['GPIO 39', '39']
-    ];
+    // Get all available pins from device
+    const digitalPins = Blockly.Device.getPinOptions('arduino_pin_setDigitalOutput');
 
-    // Read flame sensor value (analog)
+    // Read flame sensor value
     Blockly.Blocks.flameSensor_read = {
         init: function () {
             this.jsonInit({
@@ -35,7 +28,7 @@ function registerBlocks (Blockly) {
                     {
                         type: 'field_dropdown',
                         name: 'PIN',
-                        options: analogPins
+                        options: digitalPins
                     }
                 ],
                 colour: colour,
