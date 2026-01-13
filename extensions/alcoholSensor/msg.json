@@ -1,0 +1,6 @@
+{
+    "ALCOHOLSENSOR_CATEGORY": "Alcohol Sensor",
+    "ALCOHOLSENSOR_INIT": "%1 init alcohol sensor pin %2",
+    "ALCOHOLSENSOR_READ": "%1 alcohol sensor value",
+    "ALCOHOLSENSOR_DETECTED": "%1 alcohol detected?"
+}

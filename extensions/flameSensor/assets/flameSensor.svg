@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <!-- Background circle -->
+  <circle cx="40" cy="40" r="38" fill="#FF5722" stroke="#E64A19" stroke-width="2"/>
+  <!-- Flame shape -->
+  <path d="M40 15c-6 12-18 18-18 30a18 18 0 0 0 36 0c0-12-12-18-18-30z" fill="#FFCC80" stroke="#fff" stroke-width="2"/>
+  <path d="M40 35c-3 6-9 9-9 15a9 9 0 0 0 18 0c0-6-6-9-9-15z" fill="#FF8A65" stroke="#fff" stroke-width="1.5"/>
+</svg>
