@@ -121,6 +121,14 @@ function registerBlocks (Blockly) {
                         options: digitalPins
                     },
                     {
+                        type: 'field_dropdown',
+                        name: 'DIRECTION',
+                        options: [
+                            ['clockwise', 'CW'],
+                            ['counter-clockwise', 'CCW']
+                        ]
+                    },
+                    {
                         type: 'input_value',
                         name: 'SPEED'
                     }
