@@ -20,6 +20,15 @@ function registerToolboxs () {
             </shadow>
         </value>
     </block>
+    <block type="dcMotor_fan" id="dcMotor_fan">
+        <field name="IN_NEG">25</field>
+        <field name="IN_POS">17</field>
+        <value name="SPEED">
+            <shadow type="math_number">
+                <field name="NUM">0</field>
+            </shadow>
+        </value>
+    </block>
 </category>`;
 }
 

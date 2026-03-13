@@ -32,6 +32,20 @@ function registerGenerators (Blockly) {
         return `digitalWrite(${pinA}, ${stateA});\nledcWrite(${pinB}, 255 - ${speed});\n`;
     };
 
+    // Fan block (simplified for students, 50% PWM safety cap)
+    Blockly.Arduino.dcMotor_fan = function (block) {
+        const pinNeg = block.getFieldValue('IN_NEG');
+        const pinPos = block.getFieldValue('IN_POS');
+        const speed = Blockly.Arduino.valueToCode(block, 'SPEED', Blockly.Arduino.ORDER_ATOMIC) || '0';
+
+        Blockly.Arduino.setups_[`dcMotor_fan_${pinNeg}_${pinPos}`] =
+            `pinMode(${pinNeg}, OUTPUT);\n  ledcAttach(${pinPos}, 1200, 8);`;
+
+        // Direction pin always LOW, speed pin gets PWM directly (no inversion)
+        // Speed input is 0-100%, mapped to 0-128 PWM (50% of 255 safety cap)
+        return `digitalWrite(${pinNeg}, LOW);\nledcWrite(${pinPos}, constrain(map(${speed}, 0, 100, 0, 128), 0, 128));\n`;
+    };
+
     return Blockly;
 }
 

@@ -104,6 +104,34 @@ function registerBlocks (Blockly) {
         }
     };
 
+    // Fan block (simplified DC motor control for students)
+    Blockly.Blocks.dcMotor_fan = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.DCMOTOR_FAN,
+                args0: [
+                    {
+                        type: 'field_dropdown',
+                        name: 'IN_NEG',
+                        options: digitalPins
+                    },
+                    {
+                        type: 'field_dropdown',
+                        name: 'IN_POS',
+                        options: digitalPins
+                    },
+                    {
+                        type: 'input_value',
+                        name: 'SPEED'
+                    }
+                ],
+                colour: colour,
+                secondaryColour: secondaryColour,
+                extensions: ['shape_statement']
+            });
+        }
+    };
+
     return Blockly;
 }
 

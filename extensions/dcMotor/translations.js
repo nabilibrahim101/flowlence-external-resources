@@ -31,7 +31,8 @@ function registerBlocksMessages (Blockly) {
         {
             "DCMOTOR_CATEGORY": "DC Motor",
             "DCMOTOR_DIGITAL": "motor INA pin %1 state %2 INB pin %3 state %4",
-            "DCMOTOR_ANALOG": "motor INA pin %1 state %2 INB pin %3 speed %4"
+            "DCMOTOR_ANALOG": "motor INA pin %1 state %2 INB pin %3 speed %4",
+            "DCMOTOR_FAN": "fan IN- %1 IN+ %2 speed %3 %"
         }
     );
 
@@ -39,7 +40,8 @@ function registerBlocksMessages (Blockly) {
         {
             "DCMOTOR_CATEGORY": "直流电机",
             "DCMOTOR_DIGITAL": "直流电机 INA引脚 %1 电平 %2 INB引脚 %3 电平 %4",
-            "DCMOTOR_ANALOG": "直流电机 INA引脚 %1 电平 %2 INB引脚 %3 速度 %4"
+            "DCMOTOR_ANALOG": "直流电机 INA引脚 %1 电平 %2 INB引脚 %3 速度 %4",
+            "DCMOTOR_FAN": "风扇 IN- %1 IN+ %2 速度 %3 %"
         }
     );
 
@@ -51,7 +53,8 @@ function registerBlocksMessages (Blockly) {
         {
             "DCMOTOR_CATEGORY": "محرك DC",
             "DCMOTOR_DIGITAL": "محرك INA منفذ %1 حالة %2 INB منفذ %3 حالة %4",
-            "DCMOTOR_ANALOG": "محرك INA منفذ %1 حالة %2 INB منفذ %3 سرعة %4"
+            "DCMOTOR_ANALOG": "محرك INA منفذ %1 حالة %2 INB منفذ %3 سرعة %4",
+            "DCMOTOR_FAN": "مروحة IN- %1 IN+ %2 سرعة %3 %"
         }
     );
 
