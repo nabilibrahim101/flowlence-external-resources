@@ -5,23 +5,14 @@ function registerBlocks (Blockly) {
     const colour = '#2E8B57';
     const secondaryColour = '#228B22';
 
-    // ESP32 ADC pins (hardcoded for reliability)
+    // ESP32 ADC1 pins only (ADC2 pins don't work when WiFi is active)
     const analogPins = [
         ['GPIO 32', '32'],
         ['GPIO 33', '33'],
         ['GPIO 34', '34'],
         ['GPIO 35', '35'],
         ['GPIO 36', '36'],
-        ['GPIO 39', '39'],
-        ['GPIO 25', '25'],
-        ['GPIO 26', '26'],
-        ['GPIO 27', '27'],
-        ['GPIO 14', '14'],
-        ['GPIO 12', '12'],
-        ['GPIO 13', '13'],
-        ['GPIO 4', '4'],
-        ['GPIO 2', '2'],
-        ['GPIO 15', '15']
+        ['GPIO 39', '39']
     ];
 
     Blockly.Blocks.soilMoisture_init = {
