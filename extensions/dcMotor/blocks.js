@@ -124,8 +124,8 @@ function registerBlocks (Blockly) {
                         type: 'field_dropdown',
                         name: 'DIRECTION',
                         options: [
-                            ['forward', 'CW'],
-                            ['backward', 'CCW']
+                            ['forward', 'CCW'],
+                            ['backward', 'CW']
                         ]
                     },
                     {
