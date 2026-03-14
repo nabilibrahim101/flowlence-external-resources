@@ -31,7 +31,7 @@ function registerBlocksMessages (Blockly) {
         {
             "WATERLEVEL_CATEGORY": "Water Level",
             "WATERLEVEL_INIT": "initialize water level sensor pin %1",
-            "WATERLEVEL_SETMAXVALUE": "set water level max value to %1",
+            "WATERLEVEL_CALIBRATE": "calibrate: min value %1 max value %2",
             "WATERLEVEL_READVALUE": "read water level raw value",
             "WATERLEVEL_READPERCENT": "read water level %",
             "WATERLEVEL_ISLOW": "water level is low (below %1 %)?"
@@ -42,7 +42,7 @@ function registerBlocksMessages (Blockly) {
         {
             "WATERLEVEL_CATEGORY": "水位",
             "WATERLEVEL_INIT": "初始化水位传感器引脚 %1",
-            "WATERLEVEL_SETMAXVALUE": "设置水位最大值为 %1",
+            "WATERLEVEL_CALIBRATE": "校准: 最小值 %1 最大值 %2",
             "WATERLEVEL_READVALUE": "读取水位原始值",
             "WATERLEVEL_READPERCENT": "读取水位百分比",
             "WATERLEVEL_ISLOW": "水位过低 (低于 %1 %)?"
@@ -57,7 +57,7 @@ function registerBlocksMessages (Blockly) {
         {
             "WATERLEVEL_CATEGORY": "مستوى المياه",
             "WATERLEVEL_INIT": "تهيئة مستشعر مستوى المياه منفذ %1",
-            "WATERLEVEL_SETMAXVALUE": "تعيين أقصى قيمة لمستوى المياه إلى %1",
+            "WATERLEVEL_CALIBRATE": "معايرة: القيمة الدنيا %1 القيمة القصوى %2",
             "WATERLEVEL_READVALUE": "قراءة قيمة مستوى المياه الخام",
             "WATERLEVEL_READPERCENT": "قراءة نسبة مستوى المياه %",
             "WATERLEVEL_ISLOW": "مستوى المياه منخفض (أقل من %1 %)؟"

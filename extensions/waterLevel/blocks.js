@@ -33,11 +33,15 @@ function registerBlocks (Blockly) {
         }
     };
 
-    Blockly.Blocks.waterLevel_setMaxValue = {
+    Blockly.Blocks.waterLevel_calibrate = {
         init: function () {
             this.jsonInit({
-                message0: Blockly.Msg.WATERLEVEL_SETMAXVALUE,
+                message0: Blockly.Msg.WATERLEVEL_CALIBRATE,
                 args0: [
+                    {
+                        type: 'input_value',
+                        name: 'MINVALUE'
+                    },
                     {
                         type: 'input_value',
                         name: 'MAXVALUE'
