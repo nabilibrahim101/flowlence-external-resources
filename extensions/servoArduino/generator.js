@@ -12,8 +12,8 @@ function registerGenerators(Blockly) {
 
         Blockly.Arduino.includes_.servo = servoInclude;
         Blockly.Arduino.definitions_[`servo_${pin}`] = `Servo servo_${pin};`;
-        Blockly.Arduino.definitions_[`servo_${pin}_pos`] = `int servo_${pin}_pos = 90;`;
-        Blockly.Arduino.setups_[`servo_init_${pin}`] = `servo_${pin}.attach(${pin});`;
+        Blockly.Arduino.definitions_[`servo_${pin}_pos`] = `int servo_${pin}_pos = 0;`;
+        Blockly.Arduino.setups_[`servo_init_${pin}`] = `servo_${pin}.attach(${pin});\n  servo_${pin}.write(0);\n  servo_${pin}_pos = 0;`;
 
         // Define the smooth move helper function once
         Blockly.Arduino.definitions_.servo_smoothMove = `
