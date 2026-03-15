@@ -8,13 +8,35 @@ function registerGenerators(Blockly) {
     Blockly.Arduino.servoArduino_setAngle = function (block) {
         const pin = block.getFieldValue('PIN');
         const angle = Blockly.Arduino.valueToCode(block, 'ANGLE', Blockly.Arduino.ORDER_ATOMIC) || '90';
-        const delay = Blockly.Arduino.valueToCode(block, 'DELAY', Blockly.Arduino.ORDER_ATOMIC) || '200';
+        const duration = Blockly.Arduino.valueToCode(block, 'DURATION', Blockly.Arduino.ORDER_ATOMIC) || '0';
 
         Blockly.Arduino.includes_.servo = servoInclude;
         Blockly.Arduino.definitions_[`servo_${pin}`] = `Servo servo_${pin};`;
+        Blockly.Arduino.definitions_[`servo_${pin}_pos`] = `int servo_${pin}_pos = 90;`;
         Blockly.Arduino.setups_[`servo_init_${pin}`] = `servo_${pin}.attach(${pin});`;
 
-        return `servo_${pin}.write(${angle});\ndelay(${delay});\n`;
+        // Define the smooth move helper function once
+        Blockly.Arduino.definitions_.servo_smoothMove = `
+void servoSmoothMove(Servo &servo, int &currentPos, int targetPos, int duration) {
+    if (duration <= 0) {
+        servo.write(targetPos);
+        currentPos = targetPos;
+        return;
+    }
+    int steps = abs(targetPos - currentPos);
+    if (steps == 0) return;
+    int stepDelay = duration / steps;
+    if (stepDelay < 1) stepDelay = 1;
+    int dir = (targetPos > currentPos) ? 1 : -1;
+    for (int i = currentPos; i != targetPos; i += dir) {
+        servo.write(i);
+        delay(stepDelay);
+    }
+    servo.write(targetPos);
+    currentPos = targetPos;
+}`;
+
+        return `servoSmoothMove(servo_${pin}, servo_${pin}_pos, ${angle}, ${duration});\n`;
     };
 
     Blockly.Arduino.servoArduino_readAngle = function (block) {

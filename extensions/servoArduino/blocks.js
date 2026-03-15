@@ -49,7 +49,7 @@ function registerBlocks (Blockly) {
                     },
                     {
                         type: 'input_value',
-                        name: 'DELAY'
+                        name: 'DURATION'
                     }
                 ],
                 colour: colour,

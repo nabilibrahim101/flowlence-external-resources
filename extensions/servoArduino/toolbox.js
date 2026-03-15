@@ -11,9 +11,9 @@ function registerToolboxs() {
                 <field name="NUM">90</field>
             </shadow>
         </value>
-        <value name="DELAY">
+        <value name="DURATION">
             <shadow type="math_number">
-                <field name="NUM">200</field>
+                <field name="NUM">0</field>
             </shadow>
         </value>
     </block>
