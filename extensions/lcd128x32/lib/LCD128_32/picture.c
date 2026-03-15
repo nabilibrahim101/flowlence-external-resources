@@ -5,7 +5,11 @@
  * date: 2020-12-4
  * URL: https://github.com/mworkfun/ST7567A_128X32DOT_LCD
  ****************************/
-#include <avr/pgmspace.h> 
+#ifdef __AVR__
+  #include <avr/pgmspace.h>
+#else
+  #include <pgmspace.h>
+#endif
 
 /********************************************************
  * picture pixel table                                                  
