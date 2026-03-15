@@ -34,7 +34,8 @@ function registerBlocks (Blockly) {
                         name: 'ADDR',
                         options: [
                             ['0x78 (0x3c)', '0x3c'],
-                            ['0x7a (0x3d)', '0x3d']
+                            ['0x7a (0x3d)', '0x3d'],
+                            ['0x7e (0x3f)', '0x3f']
                         ]
                     }
                 ],
