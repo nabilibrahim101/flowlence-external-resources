@@ -31,7 +31,7 @@ function registerBlocksMessages (Blockly) {
         {
             "SOILMOISTURE_CATEGORY": "Soil Moisture",
             "SOILMOISTURE_INIT": "initialize soil moisture sensor pin %1",
-            "SOILMOISTURE_CALIBRATE": "calibrate: dry value %1 wet value %2",
+            "SOILMOISTURE_CALIBRATE": "calibrate: min value %1 max value %2",
             "SOILMOISTURE_READVALUE": "read soil moisture raw value",
             "SOILMOISTURE_READPERCENT": "read soil moisture %",
             "SOILMOISTURE_ISSOILDRY": "soil is dry (below %1 %)?"
@@ -42,7 +42,7 @@ function registerBlocksMessages (Blockly) {
         {
             "SOILMOISTURE_CATEGORY": "土壤湿度",
             "SOILMOISTURE_INIT": "初始化土壤湿度传感器引脚 %1",
-            "SOILMOISTURE_CALIBRATE": "校准: 干燥值 %1 潮湿值 %2",
+            "SOILMOISTURE_CALIBRATE": "校准: 最小值 %1 最大值 %2",
             "SOILMOISTURE_READVALUE": "读取土壤湿度原始值",
             "SOILMOISTURE_READPERCENT": "读取土壤湿度百分比",
             "SOILMOISTURE_ISSOILDRY": "土壤干燥 (低于 %1 %)?"
@@ -57,7 +57,7 @@ function registerBlocksMessages (Blockly) {
         {
             "SOILMOISTURE_CATEGORY": "رطوبة التربة",
             "SOILMOISTURE_INIT": "تهيئة مستشعر رطوبة التربة منفذ %1",
-            "SOILMOISTURE_CALIBRATE": "معايرة: قيمة الجفاف %1 قيمة الرطوبة %2",
+            "SOILMOISTURE_CALIBRATE": "معايرة: القيمة الأدنى %1 القيمة القصوى %2",
             "SOILMOISTURE_READVALUE": "قراءة قيمة رطوبة التربة الخام",
             "SOILMOISTURE_READPERCENT": "قراءة نسبة رطوبة التربة %",
             "SOILMOISTURE_ISSOILDRY": "التربة جافة (أقل من %1 %)؟"
