@@ -18,7 +18,7 @@
 #include <Arduino.h>
 #include <Wire.h>
 
-class lcd{
+class LCD_ST7567{
   public:
     // LCD is driven by ST7567A IC.
     // Define instructions on page 37 of the ST7567A data sheet.
@@ -63,7 +63,7 @@ class lcd{
       END        = 0xee,
     };
     
-    lcd();
+    LCD_ST7567();
     void WriteByte_command(int dat);      //Write a command to LCD.
     void WriteCont_command(int str[]);    //Continuously write commands to LCD.
     void Init();                          //This initialization function is called when using LCD.

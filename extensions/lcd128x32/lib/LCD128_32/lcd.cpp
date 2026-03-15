@@ -6,7 +6,7 @@
 
 /******************************************
 *******************************************/
-lcd::lcd(){
+LCD_ST7567::lcd(){
   
 }
 
@@ -14,7 +14,7 @@ lcd::lcd(){
  * Write a command to LCD.
  * Define instructions on page 23 of the ST7567A data sheet.
 *******************************************/
-void lcd::WriteByte_command(int dat){
+void LCD_ST7567::WriteByte_command(int dat){
   Wire.beginTransmission(addr);      // transmit to device 0x3f
   Wire.write(0x00);                  // Co=0,A0=0. data= Co-A0-0-0-0-0-0-0. 
   Wire.write(dat);                   // sends restart command. 
@@ -25,7 +25,7 @@ void lcd::WriteByte_command(int dat){
  * Init the LCD.
  * This initialization function is called when using LCD.
 *******************************************/
-void lcd::Init(){
+void LCD_ST7567::Init(){
   Wire.begin();
   delay(10);
   WriteByte_command(restart);     //resets Start Line (S[5:0]), Column Address (X[7:0]), 
@@ -61,7 +61,7 @@ void lcd::Init(){
 /******************************************
  * Used to test screen pixels.
 *******************************************/
-void lcd::testPixel(int t){
+void LCD_ST7567::testPixel(int t){
   for(int x=0; x<4; x++){
     WriteByte_command(0xb0 + x);  //y, page address y=1-0-1-1-y3-y2-y1-y0, 1-page with 8-rows
 
@@ -89,7 +89,7 @@ void lcd::testPixel(int t){
  * Write a data to LCD.
  * Define instructions on page 23 of the ST7567A data sheet.
 *******************************************/
-void lcd::WriteByte_dat(int dat){
+void LCD_ST7567::WriteByte_dat(int dat){
   Wire.beginTransmission(addr);      // transmit to device 0x7e
   Wire.write(0x40);                  // Co=0,A0=1. data= Co-A0-0-0-0-0-0-0. 
   Wire.write(dat);                   // sends data. 
@@ -100,7 +100,7 @@ void lcd::WriteByte_dat(int dat){
  * Continuously write data to LCD.
  * Define instructions on page 23 of the ST7567A data sheet.
 *******************************************/
-void lcd::WriteCont_dat(int str[]){
+void LCD_ST7567::WriteCont_dat(int str[]){
   int len = 0;
   len = sizeof(str);
   Wire.beginTransmission(addr);      // transmit to device 0x7e
@@ -117,7 +117,7 @@ void lcd::WriteCont_dat(int str[]){
  * read one byte RAM data to MCU.
  * Define instructions on page 23 of the ST7567A data sheet.
 *******************************************/
-int lcd::ReadByte_dat(int col, int page){
+int LCD_ST7567::ReadByte_dat(int col, int page){
   int dat;
   WriteByte_command(0xb0 + page);     //y, page address y=1-0-1-1-y3-y2-y1-y0, 1-page with 8-rows 
   WriteByte_command(0x10 + col/16);   //x, column address x=0-0-0-0-1-x7-x6-x5-x4
@@ -136,7 +136,7 @@ int lcd::ReadByte_dat(int col, int page){
  * display one pixel. Read-modify-Write command on page 42 of ST7567A datasheet.
  * x=0-128, y=0-31
 *******************************************/
-void lcd::DisplayPixel(int x,int y){
+void LCD_ST7567::DisplayPixel(int x,int y){
   int dat;
   WriteByte_command(0xb0 + y/8);     //y, page address y=1-0-1-1-y3-y2-y1-y0, 1-page with 8-rows 
   WriteByte_command(0x10 + x/16);    //x, column address x=0-0-0-0-1-x7-x6-x5-x4
@@ -158,7 +158,7 @@ void lcd::DisplayPixel(int x,int y){
  * Does not display a pixel. Read-modify-Write command on page 42 of ST7567A datasheet.
  * x=0-128, y=0-31
 *******************************************/
-void lcd::ClearPixel(int x,int y){
+void LCD_ST7567::ClearPixel(int x,int y){
   int dat;
   WriteByte_command(0xb0 + y/8);     //y, page address y=1-0-1-1-y3-y2-y1-y0, 1-page with 8-rows 
   WriteByte_command(0x10 + x/16);    //x, column address x=0-0-0-0-1-x7-x6-x5-x4
@@ -181,7 +181,7 @@ void lcd::ClearPixel(int x,int y){
  * clear screen, all pixel off.
  * screen size: 128*32 dot
 *******************************************/
-void lcd::Clear(){
+void LCD_ST7567::Clear(){
   for(int x=0; x<4; x++){
     WriteByte_command(0xb0 + x);   //y, page address y=1-0-1-1-y3-y2-y1-y0, 1-page with 8-rows
     
@@ -195,14 +195,14 @@ void lcd::Clear(){
   }
 }
 ///////////////////reserve///////////////////
-void lcd::FontSize(int num){
+void LCD_ST7567::FontSize(int num){
   
 }
 
 /******************************************
  * Character display position. x=0-3, y=0-17
 *******************************************/
-void lcd::Cursor(int y,int x){
+void LCD_ST7567::Cursor(int y,int x){
   if(x>17){x=17;}
   if(y>3){x=3;}
   cursor[0]=y;
@@ -212,7 +212,7 @@ void lcd::Cursor(int y,int x){
 /******************************************
  * display picture.
 *******************************************/
-void lcd::DisplayPicture(){
+void LCD_ST7567::DisplayPicture(){
   for(int x=0; x<4; x++){
     WriteByte_command(0xb0 + x);   //y, page address y=1-0-1-1-y3-y2-y1-y0, 1-page with 8-rows
     
@@ -229,7 +229,7 @@ void lcd::DisplayPicture(){
 /******************************************
  * Writes the data from the font.c file to RAM.
 *******************************************/
-void lcd::WriteFont(int num){
+void LCD_ST7567::WriteFont(int num){
   for(int i=0; i<7; i++){
     //reference: https://www.arduino.cc/reference/en/language/variables/utilities/progmem/
     WriteByte_dat(pgm_read_word_near(font_7x8[num]+i));   
@@ -240,7 +240,7 @@ void lcd::WriteFont(int num){
 /******************************************
  * display font.
 *******************************************/
-void lcd::Display(char *str){
+void LCD_ST7567::Display(char *str){
   int len = 0;
   len = strlen(str);
   
@@ -352,14 +352,14 @@ void lcd::Display(char *str){
 }
 
 //display number
-void lcd::DisplayNum(int num){
+void LCD_ST7567::DisplayNum(int num){
 	char str[18];
 	itoa(num, str, 10);
 	Display(str);
 }
 
 //display real-time numbers.
-void lcd::Display_Num(int num){
+void LCD_ST7567::Display_Num(int num){
   char str[18];
   char x1, x2, y;
 

@@ -5,7 +5,7 @@ function registerGenerators (Blockly) {
 
     Blockly.Arduino.lcd128x32_init = function () {
         Blockly.Arduino.includes_.lcd128x32_init = `#include <lcd.h>`;
-        Blockly.Arduino.definitions_.lcd128x32_var = `lcd Lcd;`;
+        Blockly.Arduino.definitions_.lcd128x32_var = `LCD_ST7567 Lcd;`;
         Blockly.Arduino.setups_.lcd128x32_setup = `Lcd.Init();\n  Lcd.Clear();`;
         return '';
     };
