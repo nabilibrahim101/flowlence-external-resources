@@ -5,24 +5,40 @@ function registerBlocks (Blockly) {
     const color = '#42CCFF';
     const secondaryColour = '#00BFFF';
 
-    // DHT thermometer icon as base64 SVG
+    // DHT thermometer icon as base64 SVG - red thermometer with measurement lines
     const dhtIconUrl = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij48cGF0aCBkPSJNMTMgMTQuNzZWMy41YTIuNSAyLjUgMCAwIDAtNSAwdjExLjI2YTQuNSA0LjUgMCAxIDAgNSAweiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmYyMDIwIiBzdHJva2Utd2lkdGg9IjEuNSIvPjxjaXJjbGUgY3g9IjEwLjUiIGN5PSIxNy41IiByPSIyIiBmaWxsPSIjZmYyMDIwIi8+PGxpbmUgeDE9IjEwLjUiIHkxPSIxNSIgeDI9IjEwLjUiIHkyPSI3IiBzdHJva2U9IiNmZjIwMjAiIHN0cm9rZS13aWR0aD0iMS41Ii8+PGxpbmUgeDE9IjE3IiB5MT0iNSIgeDI9IjIwIiB5Mj0iNSIgc3Ryb2tlPSIjZmY0NDQ0IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxsaW5lIHgxPSIxNyIgeTE9IjgiIHgyPSIyMCIgeTI9IjgiIHN0cm9rZT0iI2ZmNDQ0NCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48bGluZSB4MT0iMTciIHkxPSIxMSIgeDI9IjE5IiB5Mj0iMTEiIHN0cm9rZT0iI2ZmNDQ0NCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48bGluZSB4MT0iMTciIHkxPSIxNCIgeDI9IjE5IiB5Mj0iMTQiIHN0cm9rZT0iI2ZmNDQ0NCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48L3N2Zz4K';
 
+    // Vertical line separator
+    const separatorUrl = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0IDQwIiB3aWR0aD0iNCIgaGVpZ2h0PSI0MCI+PGxpbmUgeDE9IjIiIHkxPSIyIiB4Mj0iMiIgeTI9IjM4IiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC41KSIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvc3ZnPgo=';
+
     const digitalPins = Blockly.Device.getPinOptions('arduino_pin_setDigitalOutput');
+
+    // Reusable icon + separator args
+    const iconArgs = [
+        {
+            type: 'field_image',
+            src: dhtIconUrl,
+            width: 40,
+            height: 40,
+            alt: 'DHT',
+            flip_rtl: false
+        },
+        {
+            type: 'field_image',
+            src: separatorUrl,
+            width: 4,
+            height: 40,
+            alt: '|',
+            flip_rtl: false
+        }
+    ];
 
     Blockly.Blocks.dht_init = {
         init: function () {
             this.jsonInit({
                 message0: Blockly.Msg.DHT_INIT,
                 args0: [
-                    {
-                        type: 'field_image',
-                        src: dhtIconUrl,
-                        width: 24,
-                        height: 24,
-                        alt: 'DHT',
-                        flip_rtl: false
-                    },
+                    ...iconArgs,
                     {
                         type: 'input_value',
                         name: 'NO'
@@ -53,14 +69,7 @@ function registerBlocks (Blockly) {
             this.jsonInit({
                 message0: Blockly.Msg.DHT_READ_HUMIDITY,
                 args0: [
-                    {
-                        type: 'field_image',
-                        src: dhtIconUrl,
-                        width: 24,
-                        height: 24,
-                        alt: 'DHT',
-                        flip_rtl: false
-                    },
+                    ...iconArgs,
                     {
                         type: 'input_value',
                         name: 'NO'
@@ -73,20 +82,12 @@ function registerBlocks (Blockly) {
         }
     };
 
-
     Blockly.Blocks.dht_readTemperature = {
         init: function () {
             this.jsonInit({
                 message0: Blockly.Msg.DHT_READ_TEMPERATURE,
                 args0: [
-                    {
-                        type: 'field_image',
-                        src: dhtIconUrl,
-                        width: 24,
-                        height: 24,
-                        alt: 'DHT',
-                        flip_rtl: false
-                    },
+                    ...iconArgs,
                     {
                         type: 'input_value',
                         name: 'NO'

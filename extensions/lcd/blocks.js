@@ -8,19 +8,35 @@ function registerBlocks (Blockly) {
     // LCD display icon as base64 SVG - blue screen with text lines
     const lcdIconUrl = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij48cmVjdCB4PSIyIiB5PSI1IiB3aWR0aD0iMjAiIGhlaWdodD0iMTQiIHJ4PSIyIiBmaWxsPSIjMWE1Mjc2IiBzdHJva2U9IiMyOTgwYjkiIHN0cm9rZS13aWR0aD0iMS4yIi8+PHJlY3QgeD0iNCIgeT0iNyIgd2lkdGg9IjE2IiBoZWlnaHQ9IjYiIHJ4PSIxIiBmaWxsPSIjMzQ5OGRiIi8+PGxpbmUgeDE9IjUiIHkxPSI5IiB4Mj0iMTQiIHkyPSI5IiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGxpbmUgeDE9IjUiIHkxPSIxMSIgeDI9IjExIiB5Mj0iMTEiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48Y2lyY2xlIGN4PSIxOCIgY3k9IjE2IiByPSIxIiBmaWxsPSIjMjk4MGI5Ii8+PGNpcmNsZSBjeD0iMTUiIGN5PSIxNiIgcj0iMSIgZmlsbD0iIzI5ODBiOSIvPjwvc3ZnPgo=';
 
+    // Vertical line separator
+    const separatorUrl = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0IDQwIiB3aWR0aD0iNCIgaGVpZ2h0PSI0MCI+PGxpbmUgeDE9IjIiIHkxPSIyIiB4Mj0iMiIgeTI9IjM4IiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC41KSIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvc3ZnPgo=';
+
+    // Reusable icon + separator args
+    const iconArgs = [
+        {
+            type: 'field_image',
+            src: lcdIconUrl,
+            width: 40,
+            height: 40,
+            alt: 'LCD',
+            flip_rtl: false
+        },
+        {
+            type: 'field_image',
+            src: separatorUrl,
+            width: 4,
+            height: 40,
+            alt: '|',
+            flip_rtl: false
+        }
+    ];
+
     Blockly.Blocks.lcd_init = {
         init: function () {
             this.jsonInit({
                 message0: Blockly.Msg.LCD_INIT,
                 args0: [
-                    {
-                        type: 'field_image',
-                        src: lcdIconUrl,
-                        width: 24,
-                        height: 24,
-                        alt: 'LCD',
-                        flip_rtl: false
-                    },
+                    ...iconArgs,
                     {
                         type: 'field_dropdown',
                         name: 'ADDR',
@@ -48,14 +64,7 @@ function registerBlocks (Blockly) {
             this.jsonInit({
                 message0: Blockly.Msg.LCD_SETCURSORPOSITION,
                 args0: [
-                    {
-                        type: 'field_image',
-                        src: lcdIconUrl,
-                        width: 24,
-                        height: 24,
-                        alt: 'LCD',
-                        flip_rtl: false
-                    },
+                    ...iconArgs,
                     {
                         type: 'input_value',
                         name: 'X'
@@ -77,14 +86,7 @@ function registerBlocks (Blockly) {
             this.jsonInit({
                 message0: Blockly.Msg.LCD_PRINT,
                 args0: [
-                    {
-                        type: 'field_image',
-                        src: lcdIconUrl,
-                        width: 24,
-                        height: 24,
-                        alt: 'LCD',
-                        flip_rtl: false
-                    },
+                    ...iconArgs,
                     {
                         type: 'input_value',
                         name: 'DATA'
@@ -102,14 +104,7 @@ function registerBlocks (Blockly) {
             this.jsonInit({
                 message0: Blockly.Msg.LCD_CLEAR,
                 args0: [
-                    {
-                        type: 'field_image',
-                        src: lcdIconUrl,
-                        width: 24,
-                        height: 24,
-                        alt: 'LCD',
-                        flip_rtl: false
-                    }
+                    ...iconArgs
                 ],
                 colour: colour,
                 secondaryColour: secondaryColour,
@@ -123,14 +118,7 @@ function registerBlocks (Blockly) {
             this.jsonInit({
                 message0: Blockly.Msg.LCD_SETBACKLIGHT,
                 args0: [
-                    {
-                        type: 'field_image',
-                        src: lcdIconUrl,
-                        width: 24,
-                        height: 24,
-                        alt: 'LCD',
-                        flip_rtl: false
-                    },
+                    ...iconArgs,
                     {
                         type: 'field_dropdown',
                         name: 'STATE',
@@ -152,14 +140,7 @@ function registerBlocks (Blockly) {
             this.jsonInit({
                 message0: Blockly.Msg.LCD_SETCURSORSTYLE,
                 args0: [
-                    {
-                        type: 'field_image',
-                        src: lcdIconUrl,
-                        width: 24,
-                        height: 24,
-                        alt: 'LCD',
-                        flip_rtl: false
-                    },
+                    ...iconArgs,
                     {
                         type: 'field_dropdown',
                         name: 'STATE',

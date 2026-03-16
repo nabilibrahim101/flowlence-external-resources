@@ -34,36 +34,36 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {
             "DHT_CATEGORY": "DHT",
-            "DHT_INIT": "%1 init dht %2 pin %3 model %4",
-            "DHT_READ_HUMIDITY": "%1 dht %2 read humidity",
-            "DHT_READ_TEMPERATURE": "%1 dht %2 read temperature %3"
+            "DHT_INIT": "%1 %2 init dht %3 pin %4 model %5",
+            "DHT_READ_HUMIDITY": "%1 %2 dht %3 read humidity",
+            "DHT_READ_TEMPERATURE": "%1 %2 dht %3 read temperature %4"
         }
     );
 
     Object.assign(Blockly.ScratchMsgs.locales["ru"],
         {
             "DHT_CATEGORY": "датчик температуры и влажности DHT",
-            "DHT_INIT": "%1 инициализировать dht %2 пин %3 модель %4",
-            "DHT_READ_HUMIDITY": "%1 dht %2 считать влажность",
-            "DHT_READ_TEMPERATURE": "%1 dht %2 считать температуру %3"
+            "DHT_INIT": "%1 %2 инициализировать dht %3 пин %4 модель %5",
+            "DHT_READ_HUMIDITY": "%1 %2 dht %3 считать влажность",
+            "DHT_READ_TEMPERATURE": "%1 %2 dht %3 считать температуру %4"
         }
     );
 
     Object.assign(Blockly.ScratchMsgs.locales["zh-cn"],
         {
             "DHT_CATEGORY": "DHT",
-            "DHT_INIT": "%1 初始化 dht %2 引脚 %3 型号 %4",
-            "DHT_READ_HUMIDITY": "%1 dht %2 读取湿度",
-            "DHT_READ_TEMPERATURE": "%1 dht %2 读取温度 %3"
+            "DHT_INIT": "%1 %2 初始化 dht %3 引脚 %4 型号 %5",
+            "DHT_READ_HUMIDITY": "%1 %2 dht %3 读取湿度",
+            "DHT_READ_TEMPERATURE": "%1 %2 dht %3 读取温度 %4"
         }
     );
 
     Object.assign(Blockly.ScratchMsgs.locales["zh-tw"],
         {
             "DHT_CATEGORY": "DHT",
-            "DHT_INIT": "%1 初始化 dht %2 管腳 %3 型號 %4",
-            "DHT_READ_HUMIDITY": "%1 dht %2 讀取濕度",
-            "DHT_READ_TEMPERATURE": "%1 dht %2 讀取溫度 %3"
+            "DHT_INIT": "%1 %2 初始化 dht %3 管腳 %4 型號 %5",
+            "DHT_READ_HUMIDITY": "%1 %2 dht %3 讀取濕度",
+            "DHT_READ_TEMPERATURE": "%1 %2 dht %3 讀取溫度 %4"
         }
     );
 
