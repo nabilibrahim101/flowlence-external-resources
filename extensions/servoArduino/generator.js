@@ -5,7 +5,9 @@ function registerGenerators(Blockly) {
 
     // Common setup for any servo block
     const setupServoHelpers = function (pin) {
-        // On ESP32: use LEDC directly (avoids channel conflicts with other LEDC users like DC motors)
+        // On ESP32: use LEDC directly with explicit channel assignment
+        // Servos use channels 7,6,5... (timer 3,3,2...) to avoid conflicts
+        // with auto-assigned channels 0,1,2... used by fans/motors
         // On Arduino: use standard Servo library
         Blockly.Arduino.includes_.servo = '#ifndef ESP32\n#include <Servo.h>\n#endif';
 
@@ -14,9 +16,14 @@ function registerGenerators(Blockly) {
 Servo _servos[28];
 #endif
 
+#ifdef ESP32
+uint8_t _nextServoChannel = 7;
+#endif
+
 void servoInit(uint8_t pin) {
 #ifdef ESP32
-    ledcAttach(pin, 50, 16);
+    ledcAttachChannel(pin, 50, 16, _nextServoChannel);
+    _nextServoChannel--;
 #else
     _servos[pin].attach(pin);
 #endif
