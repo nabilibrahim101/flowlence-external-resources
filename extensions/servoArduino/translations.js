@@ -30,16 +30,16 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {
             "SERVOARDUINO_CATEGORY": "Servo",
-            "SERVOARDUINO_SETANGLE": "servo pin %1 set angle %2 duration (ms) %3",
-            "SERVOARDUINO_READANGLE": "servo pin %1 read angle"
+            "SERVOARDUINO_SETANGLE": "%1 %2 servo pin %3 set angle %4 duration (ms) %5",
+            "SERVOARDUINO_READANGLE": "%1 %2 servo pin %3 read angle"
         }
     );
 
     Object.assign(Blockly.ScratchMsgs.locales["zh-cn"],
         {
             "SERVOARDUINO_CATEGORY": "舵机",
-            "SERVOARDUINO_SETANGLE": "舵机 引脚 %1 角度 %2 时长(毫秒) %3",
-            "SERVOARDUINO_READANGLE": "舵机 引脚 %1 读取角度"
+            "SERVOARDUINO_SETANGLE": "%1 %2 舵机 引脚 %3 角度 %4 时长(毫秒) %5",
+            "SERVOARDUINO_READANGLE": "%1 %2 舵机 引脚 %3 读取角度"
         }
     );
 
@@ -50,8 +50,8 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["ar"],
         {
             "SERVOARDUINO_CATEGORY": "محرك سيرفو",
-            "SERVOARDUINO_SETANGLE": "سيرفو منفذ %1 ضبط الزاوية %2 المدة (مللي ثانية) %3",
-            "SERVOARDUINO_READANGLE": "سيرفو منفذ %1 قراءة الزاوية"
+            "SERVOARDUINO_SETANGLE": "%1 %2 سيرفو منفذ %3 ضبط الزاوية %4 المدة (مللي ثانية) %5",
+            "SERVOARDUINO_READANGLE": "%1 %2 سيرفو منفذ %3 قراءة الزاوية"
         }
     );
 

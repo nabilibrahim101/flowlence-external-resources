@@ -18,8 +18,8 @@ function registerBlocks (Blockly) {
         {
             type: 'field_image',
             src: dhtIconUrl,
-            width: 40,
-            height: 40,
+            width: 36,
+            height: 36,
             alt: 'DHT',
             flip_rtl: false
         },
