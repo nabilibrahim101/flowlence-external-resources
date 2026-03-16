@@ -12,8 +12,8 @@ function getInterfaceTranslations () {
             "dht.description": "DHT Temperature and humidity sensor module."
         },
         "ru": {
-            "dht.name": "Датчик DHT ",
-            "dht.description": "Датчик температуры и влажности DHT "
+            "dht.name": "Датчик DHT ",
+            "dht.description": "Датчик температуры и влажности DHT "
         },
         "zh-cn": {
             "dht.name": "DHT 传感器",
@@ -34,36 +34,36 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {
             "DHT_CATEGORY": "DHT",
-            "DHT_INIT": "init dht %1 pin %2 model %3",
-            "DHT_READ_HUMIDITY": "dht %1 read humidity",
-            "DHT_READ_TEMPERATURE": "dht %1 read temperature %2"
+            "DHT_INIT": "%1 init dht %2 pin %3 model %4",
+            "DHT_READ_HUMIDITY": "%1 dht %2 read humidity",
+            "DHT_READ_TEMPERATURE": "%1 dht %2 read temperature %3"
         }
     );
 
     Object.assign(Blockly.ScratchMsgs.locales["ru"],
         {
             "DHT_CATEGORY": "датчик температуры и влажности DHT",
-            "DHT_INIT": "инициализировать dht %1 пин %2 модель %3",
-            "DHT_READ_HUMIDITY": "dht %1 считать влажность",
-            "DHT_READ_TEMPERATURE": "dht %1 считать температуру %2"
+            "DHT_INIT": "%1 инициализировать dht %2 пин %3 модель %4",
+            "DHT_READ_HUMIDITY": "%1 dht %2 считать влажность",
+            "DHT_READ_TEMPERATURE": "%1 dht %2 считать температуру %3"
         }
     );
 
     Object.assign(Blockly.ScratchMsgs.locales["zh-cn"],
         {
             "DHT_CATEGORY": "DHT",
-            "DHT_INIT": "初始化 dht %1 引脚 %2 型号 %3",
-            "DHT_READ_HUMIDITY": "dht %1 读取湿度",
-            "DHT_READ_TEMPERATURE": "dht %1 读取温度 %2"
+            "DHT_INIT": "%1 初始化 dht %2 引脚 %3 型号 %4",
+            "DHT_READ_HUMIDITY": "%1 dht %2 读取湿度",
+            "DHT_READ_TEMPERATURE": "%1 dht %2 读取温度 %3"
         }
     );
 
     Object.assign(Blockly.ScratchMsgs.locales["zh-tw"],
         {
             "DHT_CATEGORY": "DHT",
-            "DHT_INIT": "初始化 dht %1 管腳 %2 型號 %3",
-            "DHT_READ_HUMIDITY": "dht %1 讀取濕度",
-            "DHT_READ_TEMPERATURE": "dht %1 讀取溫度 %2"
+            "DHT_INIT": "%1 初始化 dht %2 管腳 %3 型號 %4",
+            "DHT_READ_HUMIDITY": "%1 dht %2 讀取濕度",
+            "DHT_READ_TEMPERATURE": "%1 dht %2 讀取溫度 %3"
         }
     );
 
