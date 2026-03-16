@@ -2,24 +2,38 @@
 /* eslint-disable max-len */
 /* eslint-disable require-jsdoc */
 function registerGenerators(Blockly) {
-    // Conditional include for ESP32 vs Arduino
-    const servoInclude = '#ifdef ESP32\n#include <ESP32Servo.h>\n#else\n#include <Servo.h>\n#endif';
 
-    Blockly.Arduino.servoArduino_setAngle = function (block) {
-        const pin = block.getFieldValue('PIN');
-        const angle = Blockly.Arduino.valueToCode(block, 'ANGLE', Blockly.Arduino.ORDER_ATOMIC) || '90';
-        const duration = Blockly.Arduino.valueToCode(block, 'DURATION', Blockly.Arduino.ORDER_ATOMIC) || '0';
+    // Common setup for any servo block
+    const setupServoHelpers = function (pin) {
+        // On ESP32: use LEDC directly (avoids channel conflicts with other LEDC users like DC motors)
+        // On Arduino: use standard Servo library
+        Blockly.Arduino.includes_.servo = '#ifndef ESP32\n#include <Servo.h>\n#endif';
 
-        Blockly.Arduino.includes_.servo = servoInclude;
-        Blockly.Arduino.definitions_[`servo_${pin}`] = `Servo servo_${pin};`;
-        Blockly.Arduino.definitions_[`servo_${pin}_pos`] = `int servo_${pin}_pos = 0;`;
-        Blockly.Arduino.setups_[`servo_init_${pin}`] = `servo_${pin}.attach(${pin});\n  servo_${pin}.write(0);\n  servo_${pin}_pos = 0;`;
+        Blockly.Arduino.definitions_.servo_helpers = `
+#ifndef ESP32
+Servo _servos[28];
+#endif
 
-        // Define the smooth move helper function once
-        Blockly.Arduino.definitions_.servo_smoothMove = `
-void servoSmoothMove(Servo &servo, int &currentPos, int targetPos, int duration) {
+void servoInit(uint8_t pin) {
+#ifdef ESP32
+    ledcAttach(pin, 50, 16);
+#else
+    _servos[pin].attach(pin);
+#endif
+}
+
+void servoWrite(uint8_t pin, int angle) {
+#ifdef ESP32
+    uint32_t duty = map(constrain(angle, 0, 180), 0, 180, 1638, 8192);
+    ledcWrite(pin, duty);
+#else
+    _servos[pin].write(angle);
+#endif
+}
+
+void servoSmoothMove(uint8_t pin, int &currentPos, int targetPos, int duration) {
     if (duration <= 0) {
-        servo.write(targetPos);
+        servoWrite(pin, targetPos);
         currentPos = targetPos;
         return;
     }
@@ -29,24 +43,33 @@ void servoSmoothMove(Servo &servo, int &currentPos, int targetPos, int duration)
     if (stepDelay < 1) stepDelay = 1;
     int dir = (targetPos > currentPos) ? 1 : -1;
     for (int i = currentPos; i != targetPos; i += dir) {
-        servo.write(i);
+        servoWrite(pin, i);
         delay(stepDelay);
     }
-    servo.write(targetPos);
+    servoWrite(pin, targetPos);
     currentPos = targetPos;
 }`;
 
-        return `servoSmoothMove(servo_${pin}, servo_${pin}_pos, ${angle}, ${duration});\n`;
+        Blockly.Arduino.definitions_[`servo_${pin}_pos`] = `int servo_${pin}_pos = 0;`;
+        Blockly.Arduino.setups_[`servo_init_${pin}`] = `servoInit(${pin});\n  servoWrite(${pin}, 0);\n  servo_${pin}_pos = 0;`;
+    };
+
+    Blockly.Arduino.servoArduino_setAngle = function (block) {
+        const pin = block.getFieldValue('PIN');
+        const angle = Blockly.Arduino.valueToCode(block, 'ANGLE', Blockly.Arduino.ORDER_ATOMIC) || '90';
+        const duration = Blockly.Arduino.valueToCode(block, 'DURATION', Blockly.Arduino.ORDER_ATOMIC) || '0';
+
+        setupServoHelpers(pin);
+
+        return `servoSmoothMove(${pin}, servo_${pin}_pos, ${angle}, ${duration});\n`;
     };
 
     Blockly.Arduino.servoArduino_readAngle = function (block) {
         const pin = block.getFieldValue('PIN');
 
-        Blockly.Arduino.includes_.servo = servoInclude;
-        Blockly.Arduino.definitions_[`servo_${pin}`] = `Servo servo_${pin};`;
-        Blockly.Arduino.setups_[`servo_init_${pin}`] = `servo_${pin}.attach(${pin});`;
+        setupServoHelpers(pin);
 
-        return [`servo_${pin}.read()`, Blockly.Arduino.ORDER_ATOMIC];
+        return [`servo_${pin}_pos`, Blockly.Arduino.ORDER_ATOMIC];
     };
 
     return Blockly;
