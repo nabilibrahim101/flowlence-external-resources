@@ -3,7 +3,7 @@
 /* eslint-disable require-jsdoc */
 function registerToolboxs () {
     return `
-<category name="%{BKY_MQTT_CATEGORY}" id="MQTT_CATEGORY" colour="#5C6BC0" secondaryColour="#3F51B5">
+<category name="%{BKY_MQTT_CATEGORY}" id="MQTT_CATEGORY" colour="#5C6BC0" secondaryColour="#3F51B5" iconURI="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MCA0MCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIj48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIyMCIgZmlsbD0iIzVDNkJDMCIvPjxwYXRoIGQ9Ik03IDIyIFE3IDE2IDEyIDE2IFExMyAxMCAxOSAxMCBRMjUgMTAgMjUgMTYgUTMwIDE2IDMwIDIwIFEzMCAyNCAyNSAyNCBIMTIgUTcgMjQgNyAyMnoiIGZpbGw9IiNDNUNBRTkiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIwLjgiLz48cGF0aCBkPSJNMTUgMjFWMjkiIHN0cm9rZT0iIzRDQUY1MCIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik0xMi41IDI3bDIuNSAyLjUgMi41LTIuNSIgc3Ryb2tlPSIjNENBRjUwIiBzdHJva2Utd2lkdGg9IjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxwYXRoIGQ9Ik0yNSAyOVYyMSIgc3Ryb2tlPSIjRkY5ODAwIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTIyLjUgMjNsMi41LTIuNSAyLjUgMi41IiBzdHJva2U9IiNGRjk4MDAiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PC9zdmc+Cg==">
     <block type="mqtt_connect" id="mqtt_connect">
         <value name="SERVER">
             <shadow type="text">

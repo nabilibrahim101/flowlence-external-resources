@@ -5,7 +5,33 @@ function registerBlocks (Blockly) {
     const colour = '#9C27B0';
     const secondaryColour = '#7B1FA2';
 
+    // Horn Amplifier icon as base64 SVG
+    const hornIconUrl = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij48cGF0aCBkPSJNMyA5aDNsNS01djE2bC01LTVIM1Y5eiIgZmlsbD0iI0NFOTNEOCIgc3Ryb2tlPSIjN0IxRkEyIiBzdHJva2Utd2lkdGg9IjEiLz48cGF0aCBkPSJNMTYgOC41YTQgNCAwIDAgMSAwIDciIHN0cm9rZT0iI0ZGQTcyNiIgc3Ryb2tlLXdpZHRoPSIxLjgiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik0xOC41IDZhNyA3IDAgMCAxIDAgMTIiIHN0cm9rZT0iI0ZGNzA0MyIgc3Ryb2tlLXdpZHRoPSIxLjUiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvc3ZnPgo=';
+
+    // Vertical line separator
+    const separatorUrl = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0IDQwIiB3aWR0aD0iNCIgaGVpZ2h0PSI0MCI+PGxpbmUgeDE9IjIiIHkxPSIyIiB4Mj0iMiIgeTI9IjM4IiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC41KSIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvc3ZnPgo=';
+
     const digitalPins = Blockly.Device.getPinOptions('arduino_pin_setDigitalOutput');
+
+    // Reusable icon + separator args
+    const iconArgs = [
+        {
+            type: 'field_image',
+            src: hornIconUrl,
+            width: 36,
+            height: 36,
+            alt: 'Horn',
+            flip_rtl: false
+        },
+        {
+            type: 'field_image',
+            src: separatorUrl,
+            width: 4,
+            height: 40,
+            alt: '|',
+            flip_rtl: false
+        }
+    ];
 
     const note = [
         ['C3', 'note_C3'],
@@ -61,6 +87,7 @@ function registerBlocks (Blockly) {
             this.jsonInit({
                 message0: Blockly.Msg.HORNAMPLIFIER_INIT,
                 args0: [
+                    ...iconArgs,
                     {
                         type: 'field_dropdown',
                         name: 'PIN',
@@ -79,6 +106,7 @@ function registerBlocks (Blockly) {
             this.jsonInit({
                 message0: Blockly.Msg.HORNAMPLIFIER_PLAYTONEFORBEAT,
                 args0: [
+                    ...iconArgs,
                     {
                         type: 'field_dropdown',
                         name: 'FREQ',
@@ -102,6 +130,7 @@ function registerBlocks (Blockly) {
             this.jsonInit({
                 message0: Blockly.Msg.HORNAMPLIFIER_PLAYTONEFORMS,
                 args0: [
+                    ...iconArgs,
                     {
                         type: 'input_value',
                         name: 'FREQ'
@@ -123,6 +152,7 @@ function registerBlocks (Blockly) {
             this.jsonInit({
                 message0: Blockly.Msg.HORNAMPLIFIER_SETTEMPO,
                 args0: [
+                    ...iconArgs,
                     {
                         type: 'input_value',
                         name: 'BPM'
@@ -139,6 +169,9 @@ function registerBlocks (Blockly) {
         init: function () {
             this.jsonInit({
                 message0: Blockly.Msg.HORNAMPLIFIER_STOP,
+                args0: [
+                    ...iconArgs
+                ],
                 colour: colour,
                 secondaryColour: secondaryColour,
                 extensions: ['shape_statement']
@@ -151,6 +184,7 @@ function registerBlocks (Blockly) {
             this.jsonInit({
                 message0: Blockly.Msg.HORNAMPLIFIER_PLAYRINGTONE,
                 args0: [
+                    ...iconArgs,
                     {
                         type: 'field_dropdown',
                         name: 'NO',

@@ -30,14 +30,14 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {
             "ALCOHOLSENSOR_CATEGORY": "Alcohol Sensor",
-            "ALCOHOLSENSOR_READ": "alcohol sensor %1 %2 value"
+            "ALCOHOLSENSOR_READ": "%1 %2 alcohol sensor %3 %4 value"
         }
     );
 
     Object.assign(Blockly.ScratchMsgs.locales["zh-cn"],
         {
             "ALCOHOLSENSOR_CATEGORY": "酒精传感器",
-            "ALCOHOLSENSOR_READ": "酒精传感器 %1 %2 值"
+            "ALCOHOLSENSOR_READ": "%1 %2 酒精传感器 %3 %4 值"
         }
     );
 
@@ -48,7 +48,7 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["ar"],
         {
             "ALCOHOLSENSOR_CATEGORY": "مستشعر الكحول",
-            "ALCOHOLSENSOR_READ": "مستشعر الكحول %1 %2 قيمة"
+            "ALCOHOLSENSOR_READ": "%1 %2 مستشعر الكحول %3 %4 قيمة"
         }
     );
 

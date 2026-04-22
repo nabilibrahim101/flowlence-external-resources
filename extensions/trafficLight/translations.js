@@ -30,26 +30,28 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {
             "TRAFFICLIGHT_CATEGORY": "Traffic Light",
-            "TRAFFICLIGHT_INIT": "init traffic light red %1 orange %2 green %3",
-            "TRAFFICLIGHT_SET": "set %1 light to %2",
+            "TRAFFICLIGHT_INIT": "%1 %2 init traffic light red %3 orange %4 green %5",
+            "TRAFFICLIGHT_SET": "%1 %2 set %3 light to %4",
             "TRAFFICLIGHT_RED": "Red",
             "TRAFFICLIGHT_ORANGE": "Orange",
             "TRAFFICLIGHT_GREEN": "Green",
             "TRAFFICLIGHT_ON": "ON",
-            "TRAFFICLIGHT_OFF": "OFF"
+            "TRAFFICLIGHT_OFF": "OFF",
+            "TRAFFICLIGHT_SET_ALL": "%1 %2 red %3 orange %4 green %5"
         }
     );
 
     Object.assign(Blockly.ScratchMsgs.locales["zh-cn"],
         {
             "TRAFFICLIGHT_CATEGORY": "交通灯",
-            "TRAFFICLIGHT_INIT": "初始化交通灯 红 %1 橙 %2 绿 %3",
-            "TRAFFICLIGHT_SET": "设置 %1 灯为 %2",
+            "TRAFFICLIGHT_INIT": "%1 %2 初始化交通灯 红 %3 橙 %4 绿 %5",
+            "TRAFFICLIGHT_SET": "%1 %2 设置 %3 灯为 %4",
             "TRAFFICLIGHT_RED": "红",
             "TRAFFICLIGHT_ORANGE": "橙",
             "TRAFFICLIGHT_GREEN": "绿",
             "TRAFFICLIGHT_ON": "开",
-            "TRAFFICLIGHT_OFF": "关"
+            "TRAFFICLIGHT_OFF": "关",
+            "TRAFFICLIGHT_SET_ALL": "%1 %2 红 %3 橙 %4 绿 %5"
         }
     );
 
@@ -60,13 +62,14 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["ar"],
         {
             "TRAFFICLIGHT_CATEGORY": "إشارة المرور",
-            "TRAFFICLIGHT_INIT": "تهيئة إشارة المرور أحمر %1 برتقالي %2 أخضر %3",
-            "TRAFFICLIGHT_SET": "ضبط ضوء %1 إلى %2",
+            "TRAFFICLIGHT_INIT": "%1 %2 تهيئة إشارة المرور أحمر %3 برتقالي %4 أخضر %5",
+            "TRAFFICLIGHT_SET": "%1 %2 ضبط ضوء %3 إلى %4",
             "TRAFFICLIGHT_RED": "أحمر",
             "TRAFFICLIGHT_ORANGE": "برتقالي",
             "TRAFFICLIGHT_GREEN": "أخضر",
             "TRAFFICLIGHT_ON": "تشغيل",
-            "TRAFFICLIGHT_OFF": "إيقاف"
+            "TRAFFICLIGHT_OFF": "إيقاف",
+            "TRAFFICLIGHT_SET_ALL": "%1 %2 أحمر %3 برتقالي %4 أخضر %5"
         }
     );
 

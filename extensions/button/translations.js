@@ -30,16 +30,16 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {
             "BUTTON_CATEGORY": "Button",
-            "BUTTON_READ_STATE": "button pin %1 pressed?",
-            "BUTTON_READ_VALUE": "button pin %1 value"
+            "BUTTON_READ_STATE": "%1 %2 button pin %3 pressed?",
+            "BUTTON_READ_VALUE": "%1 %2 button pin %3 value"
         }
     );
 
     Object.assign(Blockly.ScratchMsgs.locales["zh-cn"],
         {
             "BUTTON_CATEGORY": "按钮",
-            "BUTTON_READ_STATE": "按钮引脚 %1 被按下?",
-            "BUTTON_READ_VALUE": "按钮引脚 %1 值"
+            "BUTTON_READ_STATE": "%1 %2 按钮引脚 %3 被按下?",
+            "BUTTON_READ_VALUE": "%1 %2 按钮引脚 %3 值"
         }
     );
 
@@ -49,8 +49,8 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["ar"],
         {
             "BUTTON_CATEGORY": "زر",
-            "BUTTON_READ_STATE": "زر الدبوس %1 مضغوط؟",
-            "BUTTON_READ_VALUE": "زر الدبوس %1 قيمة"
+            "BUTTON_READ_STATE": "%1 %2 زر الدبوس %3 مضغوط؟",
+            "BUTTON_READ_VALUE": "%1 %2 زر الدبوس %3 قيمة"
         }
     );
 

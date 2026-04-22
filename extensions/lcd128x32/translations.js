@@ -30,22 +30,22 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {
             "LCD128X32_CATEGORY": "LCD 128x32",
-            "LCD128X32_INIT": "initialize LCD 128x32",
-            "LCD128X32_CLEAR": "clear LCD",
-            "LCD128X32_SETCURSOR": "set cursor row %1 column %2",
-            "LCD128X32_PRINTSTRING": "print text %1",
-            "LCD128X32_PRINTNUMBER": "print number %1"
+            "LCD128X32_INIT": "%1 %2 initialize LCD 128x32",
+            "LCD128X32_CLEAR": "%1 %2 clear LCD",
+            "LCD128X32_SETCURSOR": "%1 %2 set cursor row %3 column %4",
+            "LCD128X32_PRINTSTRING": "%1 %2 print text %3",
+            "LCD128X32_PRINTNUMBER": "%1 %2 print number %3"
         }
     );
 
     Object.assign(Blockly.ScratchMsgs.locales["zh-cn"],
         {
             "LCD128X32_CATEGORY": "LCD 128x32",
-            "LCD128X32_INIT": "初始化 LCD 128x32",
-            "LCD128X32_CLEAR": "清除 LCD",
-            "LCD128X32_SETCURSOR": "设置光标 行 %1 列 %2",
-            "LCD128X32_PRINTSTRING": "显示文本 %1",
-            "LCD128X32_PRINTNUMBER": "显示数字 %1"
+            "LCD128X32_INIT": "%1 %2 初始化 LCD 128x32",
+            "LCD128X32_CLEAR": "%1 %2 清除 LCD",
+            "LCD128X32_SETCURSOR": "%1 %2 设置光标 行 %3 列 %4",
+            "LCD128X32_PRINTSTRING": "%1 %2 显示文本 %3",
+            "LCD128X32_PRINTNUMBER": "%1 %2 显示数字 %3"
         }
     );
 
@@ -55,11 +55,11 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["ar"],
         {
             "LCD128X32_CATEGORY": "شاشة LCD 128x32",
-            "LCD128X32_INIT": "تهيئة شاشة LCD 128x32",
-            "LCD128X32_CLEAR": "مسح الشاشة",
-            "LCD128X32_SETCURSOR": "تعيين المؤشر صف %1 عمود %2",
-            "LCD128X32_PRINTSTRING": "طباعة نص %1",
-            "LCD128X32_PRINTNUMBER": "طباعة رقم %1"
+            "LCD128X32_INIT": "%1 %2 تهيئة شاشة LCD 128x32",
+            "LCD128X32_CLEAR": "%1 %2 مسح الشاشة",
+            "LCD128X32_SETCURSOR": "%1 %2 تعيين المؤشر صف %3 عمود %4",
+            "LCD128X32_PRINTSTRING": "%1 %2 طباعة نص %3",
+            "LCD128X32_PRINTNUMBER": "%1 %2 طباعة رقم %3"
         }
     );
 

@@ -30,24 +30,24 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {
             "ACTIVEBUZZER_CATEGORY": "Active Buzzer",
-            "ACTIVEBUZZER_INIT": "initialize active buzzer pin %1",
-            "ACTIVEBUZZER_SETSTATE": "set buzzer %1",
+            "ACTIVEBUZZER_INIT": "%1 %2 initialize active buzzer pin %3",
+            "ACTIVEBUZZER_SETSTATE": "%1 %2 set buzzer %3",
             "ACTIVEBUZZER_ON": "ON",
             "ACTIVEBUZZER_OFF": "OFF",
-            "ACTIVEBUZZER_BEEP": "beep for %1 ms",
-            "ACTIVEBUZZER_BEEPTIMES": "beep %1 times, %2 ms on, %3 ms off"
+            "ACTIVEBUZZER_BEEP": "%1 %2 beep for %3 ms",
+            "ACTIVEBUZZER_BEEPTIMES": "%1 %2 beep %3 times, %4 ms on, %5 ms off"
         }
     );
 
     Object.assign(Blockly.ScratchMsgs.locales["zh-cn"],
         {
             "ACTIVEBUZZER_CATEGORY": "有源蜂鸣器",
-            "ACTIVEBUZZER_INIT": "初始化有源蜂鸣器引脚 %1",
-            "ACTIVEBUZZER_SETSTATE": "设置蜂鸣器 %1",
+            "ACTIVEBUZZER_INIT": "%1 %2 初始化有源蜂鸣器引脚 %3",
+            "ACTIVEBUZZER_SETSTATE": "%1 %2 设置蜂鸣器 %3",
             "ACTIVEBUZZER_ON": "开",
             "ACTIVEBUZZER_OFF": "关",
-            "ACTIVEBUZZER_BEEP": "蜂鸣 %1 毫秒",
-            "ACTIVEBUZZER_BEEPTIMES": "蜂鸣 %1 次，响 %2 毫秒，停 %3 毫秒"
+            "ACTIVEBUZZER_BEEP": "%1 %2 蜂鸣 %3 毫秒",
+            "ACTIVEBUZZER_BEEPTIMES": "%1 %2 蜂鸣 %3 次，响 %4 毫秒，停 %5 毫秒"
         }
     );
 
@@ -58,12 +58,12 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["ar"],
         {
             "ACTIVEBUZZER_CATEGORY": "جرس نشط",
-            "ACTIVEBUZZER_INIT": "تهيئة منفذ الجرس النشط %1",
-            "ACTIVEBUZZER_SETSTATE": "اضبط الجرس %1",
+            "ACTIVEBUZZER_INIT": "%1 %2 تهيئة منفذ الجرس النشط %3",
+            "ACTIVEBUZZER_SETSTATE": "%1 %2 اضبط الجرس %3",
             "ACTIVEBUZZER_ON": "تشغيل",
             "ACTIVEBUZZER_OFF": "إيقاف",
-            "ACTIVEBUZZER_BEEP": "صفير لمدة %1 مللي ثانية",
-            "ACTIVEBUZZER_BEEPTIMES": "صفير %1 مرات، %2 مللي ثانية تشغيل، %3 مللي ثانية إيقاف"
+            "ACTIVEBUZZER_BEEP": "%1 %2 صفير لمدة %3 مللي ثانية",
+            "ACTIVEBUZZER_BEEPTIMES": "%1 %2 صفير %3 مرات، %4 مللي ثانية تشغيل، %5 مللي ثانية إيقاف"
         }
     );
 

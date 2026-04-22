@@ -37,6 +37,16 @@ function registerGenerators (Blockly) {
         return `digitalWrite(${pinName}, ${state});\n`;
     };
 
+    Blockly.Arduino.trafficLight_setAll = function (block) {
+        const redState = block.getFieldValue('RED_STATE');
+        const orangeState = block.getFieldValue('ORANGE_STATE');
+        const greenState = block.getFieldValue('GREEN_STATE');
+
+        return `digitalWrite(TRAFFIC_RED_PIN, ${redState});\n` +
+            `digitalWrite(TRAFFIC_ORANGE_PIN, ${orangeState});\n` +
+            `digitalWrite(TRAFFIC_GREEN_PIN, ${greenState});\n`;
+    };
+
     return Blockly;
 }
 

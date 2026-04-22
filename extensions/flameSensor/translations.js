@@ -30,14 +30,14 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {
             "FLAMESENSOR_CATEGORY": "Flame Sensor",
-            "FLAMESENSOR_READ": "flame sensor %1 %2 value"
+            "FLAMESENSOR_READ": "%1 %2 flame sensor %3 %4 value"
         }
     );
 
     Object.assign(Blockly.ScratchMsgs.locales["zh-cn"],
         {
             "FLAMESENSOR_CATEGORY": "火焰传感器",
-            "FLAMESENSOR_READ": "火焰传感器 %1 %2 值"
+            "FLAMESENSOR_READ": "%1 %2 火焰传感器 %3 %4 值"
         }
     );
 
@@ -48,7 +48,7 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["ar"],
         {
             "FLAMESENSOR_CATEGORY": "مستشعر اللهب",
-            "FLAMESENSOR_READ": "مستشعر اللهب %1 %2 قيمة"
+            "FLAMESENSOR_READ": "%1 %2 مستشعر اللهب %3 %4 قيمة"
         }
     );
 

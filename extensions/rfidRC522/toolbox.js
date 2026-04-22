@@ -3,7 +3,7 @@
 /* eslint-disable require-jsdoc */
 function registerToolboxs () {
     return `
-<category name="%{BKY_RFIDRC522_CATEGORY}" id="RFIDRC522_CATEGORY" colour="#42CCFF" secondaryColour="#00BFFF">
+<category name="%{BKY_RFIDRC522_CATEGORY}" id="RFIDRC522_CATEGORY" colour="#42CCFF" secondaryColour="#00BFFF" iconURI="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MCA0MCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIj48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIyMCIgZmlsbD0iIzQyQ0NGRiIvPjxyZWN0IHg9IjUiIHk9IjEyIiB3aWR0aD0iMjAiIGhlaWdodD0iMTYiIHJ4PSIyIiBmaWxsPSIjMTU2NUMwIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMSIvPjxyZWN0IHg9IjgiIHk9IjE1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxLjUiIGZpbGw9IiMxRTg4RTUiLz48Y2lyY2xlIGN4PSIxNSIgY3k9IjIwIiByPSIzLjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48Y2lyY2xlIGN4PSIxNSIgY3k9IjIwIiByPSIxLjIiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSIyMyIgeT0iNyIgd2lkdGg9IjExIiBoZWlnaHQ9IjE2IiByeD0iMiIgZmlsbD0iI0ZGRjlDNCIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjAuOCIgdHJhbnNmb3JtPSJyb3RhdGUoMTIgMjguNSAxNSkiLz48cmVjdCB4PSIyNiIgeT0iMTQiIHdpZHRoPSI0IiBoZWlnaHQ9IjIuNSIgcng9IjAuNSIgZmlsbD0iI0ZERDgzNSIgdHJhbnNmb3JtPSJyb3RhdGUoMTIgMjggMTUuMjUpIi8+PC9zdmc+Cg==">
     <block type="rfidRC522_init" id="rfidRC522_init"></block>
     <block type="rfidRC522_read" id="rfidRC522_read"></block>
 </category>`;

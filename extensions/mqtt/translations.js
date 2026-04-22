@@ -30,26 +30,26 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {
             "MQTT_CATEGORY": "MQTT",
-            "MQTT_CONNECT": "%1 connect to broker %2 port %3 client ID %4",
-            "MQTT_CONNECT_AUTH": "%1 connect to broker %2 port %3 client ID %4 user %5 password %6",
-            "MQTT_PUBLISH": "%1 publish to topic %2 message %3",
-            "MQTT_SUBSCRIBE": "%1 subscribe to topic %2",
-            "MQTT_IS_CONNECTED": "%1 is connected?",
-            "MQTT_LOOP": "%1 MQTT loop",
-            "MQTT_DISCONNECT": "%1 disconnect"
+            "MQTT_CONNECT": "%1 %2 connect to broker %3 port %4 client ID %5",
+            "MQTT_CONNECT_AUTH": "%1 %2 connect to broker %3 port %4 client ID %5 user %6 password %7",
+            "MQTT_PUBLISH": "%1 %2 publish to topic %3 message %4",
+            "MQTT_SUBSCRIBE": "%1 %2 subscribe to topic %3",
+            "MQTT_IS_CONNECTED": "%1 %2 is connected?",
+            "MQTT_LOOP": "%1 %2 MQTT loop",
+            "MQTT_DISCONNECT": "%1 %2 disconnect"
         }
     );
 
     Object.assign(Blockly.ScratchMsgs.locales["zh-cn"],
         {
             "MQTT_CATEGORY": "MQTT",
-            "MQTT_CONNECT": "%1 连接到代理 %2 端口 %3 客户端ID %4",
-            "MQTT_CONNECT_AUTH": "%1 连接到代理 %2 端口 %3 客户端ID %4 用户 %5 密码 %6",
-            "MQTT_PUBLISH": "%1 发布到主题 %2 消息 %3",
-            "MQTT_SUBSCRIBE": "%1 订阅主题 %2",
-            "MQTT_IS_CONNECTED": "%1 已连接?",
-            "MQTT_LOOP": "%1 MQTT循环",
-            "MQTT_DISCONNECT": "%1 断开连接"
+            "MQTT_CONNECT": "%1 %2 连接到代理 %3 端口 %4 客户端ID %5",
+            "MQTT_CONNECT_AUTH": "%1 %2 连接到代理 %3 端口 %4 客户端ID %5 用户 %6 密码 %7",
+            "MQTT_PUBLISH": "%1 %2 发布到主题 %3 消息 %4",
+            "MQTT_SUBSCRIBE": "%1 %2 订阅主题 %3",
+            "MQTT_IS_CONNECTED": "%1 %2 已连接?",
+            "MQTT_LOOP": "%1 %2 MQTT循环",
+            "MQTT_DISCONNECT": "%1 %2 断开连接"
         }
     );
 
@@ -60,13 +60,13 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["ar"],
         {
             "MQTT_CATEGORY": "MQTT",
-            "MQTT_CONNECT": "%1 الاتصال بالوسيط %2 المنفذ %3 معرف العميل %4",
-            "MQTT_CONNECT_AUTH": "%1 الاتصال بالوسيط %2 المنفذ %3 معرف العميل %4 المستخدم %5 كلمة المرور %6",
-            "MQTT_PUBLISH": "%1 نشر إلى الموضوع %2 الرسالة %3",
-            "MQTT_SUBSCRIBE": "%1 الاشتراك في الموضوع %2",
-            "MQTT_IS_CONNECTED": "%1 متصل؟",
-            "MQTT_LOOP": "%1 حلقة MQTT",
-            "MQTT_DISCONNECT": "%1 قطع الاتصال"
+            "MQTT_CONNECT": "%1 %2 الاتصال بالوسيط %3 المنفذ %4 معرف العميل %5",
+            "MQTT_CONNECT_AUTH": "%1 %2 الاتصال بالوسيط %3 المنفذ %4 معرف العميل %5 المستخدم %6 كلمة المرور %7",
+            "MQTT_PUBLISH": "%1 %2 نشر إلى الموضوع %3 الرسالة %4",
+            "MQTT_SUBSCRIBE": "%1 %2 الاشتراك في الموضوع %3",
+            "MQTT_IS_CONNECTED": "%1 %2 متصل؟",
+            "MQTT_LOOP": "%1 %2 حلقة MQTT",
+            "MQTT_DISCONNECT": "%1 %2 قطع الاتصال"
         }
     );
 

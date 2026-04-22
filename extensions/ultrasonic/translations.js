@@ -51,28 +51,28 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {
             "ULTRASONIC_CATEGORY": "Ultrasonic",
-            "ULTRASONIC_READ_DISTANCE": "ultrasonic sensor pin TRIG %1 ECHO %2 read distance %3"
+            "ULTRASONIC_READ_DISTANCE": "%1 %2 ultrasonic sensor pin TRIG %3 ECHO %4 read distance %5"
         }
     );
 
     Object.assign(Blockly.ScratchMsgs.locales["ru"],
         {
             "ULTRASONIC_CATEGORY": "Ультразвуковой",
-            "ULTRASONIC_READ_DISTANCE": "пины ультразвукового датчика TRIG %1 ECHO %2 расстояние считывания %3"
+            "ULTRASONIC_READ_DISTANCE": "%1 %2 пины ультразвукового датчика TRIG %3 ECHO %4 расстояние считывания %5"
         }
     );
 
     Object.assign(Blockly.ScratchMsgs.locales["zh-cn"],
         {
             "ULTRASONIC_CATEGORY": "超声波",
-            "ULTRASONIC_READ_DISTANCE": "超声波传感器引脚 TRIG %1 ECHO %2 读取距离 %3"
+            "ULTRASONIC_READ_DISTANCE": "%1 %2 超声波传感器引脚 TRIG %3 ECHO %4 读取距离 %5"
         }
     );
 
     Object.assign(Blockly.ScratchMsgs.locales["zh-tw"],
         {
             "ULTRASONIC_CATEGORY": "超聲波",
-            "ULTRASONIC_READ_DISTANCE": "超聲波傳感器管腳 TRIG %1 ECHO %2 讀取距離 %3"
+            "ULTRASONIC_READ_DISTANCE": "%1 %2 超聲波傳感器管腳 TRIG %3 ECHO %4 讀取距離 %5"
         }
     );
 

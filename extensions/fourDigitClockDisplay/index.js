@@ -11,7 +11,7 @@ const fourDigitClockDisplay = formatMessage => ({
     iconURL: `assets/fourDigitClockDisplay.png`,
     description: formatMessage({
         id: 'fourDigitClockDisplay.description',
-        default: '4-digit clock display module based on TM1637.'
+        default: '4-digit clock display module based on TM1650 (I2C).'
     }),
     featured: true,
     blocks: 'blocks.js',

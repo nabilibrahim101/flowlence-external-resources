@@ -30,18 +30,18 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {
             "DCMOTOR_CATEGORY": "DC Motor",
-            "DCMOTOR_DIGITAL": "motor INA pin %1 state %2 INB pin %3 state %4",
-            "DCMOTOR_ANALOG": "motor INA pin %1 state %2 INB pin %3 speed %4",
-            "DCMOTOR_FAN": "fan IN- %1 IN+ %2 direction %3 speed %4 %"
+            "DCMOTOR_DIGITAL": "%1 %2 motor INA pin %3 state %4 INB pin %5 state %6",
+            "DCMOTOR_ANALOG": "%1 %2 motor INA pin %3 state %4 INB pin %5 speed %6",
+            "DCMOTOR_FAN": "%1 %2 fan IN- %3 IN+ %4 direction %5 speed %6 %"
         }
     );
 
     Object.assign(Blockly.ScratchMsgs.locales["zh-cn"],
         {
             "DCMOTOR_CATEGORY": "直流电机",
-            "DCMOTOR_DIGITAL": "直流电机 INA引脚 %1 电平 %2 INB引脚 %3 电平 %4",
-            "DCMOTOR_ANALOG": "直流电机 INA引脚 %1 电平 %2 INB引脚 %3 速度 %4",
-            "DCMOTOR_FAN": "风扇 IN- %1 IN+ %2 方向 %3 速度 %4 %"
+            "DCMOTOR_DIGITAL": "%1 %2 直流电机 INA引脚 %3 电平 %4 INB引脚 %5 电平 %6",
+            "DCMOTOR_ANALOG": "%1 %2 直流电机 INA引脚 %3 电平 %4 INB引脚 %5 速度 %6",
+            "DCMOTOR_FAN": "%1 %2 风扇 IN- %3 IN+ %4 方向 %5 速度 %6 %"
         }
     );
 
@@ -52,9 +52,9 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["ar"],
         {
             "DCMOTOR_CATEGORY": "محرك DC",
-            "DCMOTOR_DIGITAL": "محرك INA منفذ %1 حالة %2 INB منفذ %3 حالة %4",
-            "DCMOTOR_ANALOG": "محرك INA منفذ %1 حالة %2 INB منفذ %3 سرعة %4",
-            "DCMOTOR_FAN": "مروحة IN- %1 IN+ %2 اتجاه %3 سرعة %4 %"
+            "DCMOTOR_DIGITAL": "%1 %2 محرك INA منفذ %3 حالة %4 INB منفذ %5 حالة %6",
+            "DCMOTOR_ANALOG": "%1 %2 محرك INA منفذ %3 حالة %4 INB منفذ %5 سرعة %6",
+            "DCMOTOR_FAN": "%1 %2 مروحة IN- %3 IN+ %4 اتجاه %5 سرعة %6 %"
         }
     );
 

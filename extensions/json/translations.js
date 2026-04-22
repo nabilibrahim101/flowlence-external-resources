@@ -30,20 +30,20 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {
             "JSON_CATEGORY": "JSON",
-            "JSON_CREATE_1": "JSON { %1:%2 }",
-            "JSON_CREATE_2": "JSON { %1:%2 , %3:%4 }",
-            "JSON_CREATE_3": "JSON { %1:%2 , %3:%4 , %5:%6 }",
-            "JSON_CREATE_5": "JSON { %1:%2 , %3:%4 , %5:%6 , %7:%8 , %9:%10 }"
+            "JSON_CREATE_1": "%1 %2 JSON { %3:%4 }",
+            "JSON_CREATE_2": "%1 %2 JSON { %3:%4 , %5:%6 }",
+            "JSON_CREATE_3": "%1 %2 JSON { %3:%4 , %5:%6 , %7:%8 }",
+            "JSON_CREATE_5": "%1 %2 JSON { %3:%4 , %5:%6 , %7:%8 , %9:%10 , %11:%12 }"
         }
     );
 
     Object.assign(Blockly.ScratchMsgs.locales["zh-cn"],
         {
             "JSON_CATEGORY": "JSON",
-            "JSON_CREATE_1": "JSON { %1:%2 }",
-            "JSON_CREATE_2": "JSON { %1:%2 , %3:%4 }",
-            "JSON_CREATE_3": "JSON { %1:%2 , %3:%4 , %5:%6 }",
-            "JSON_CREATE_5": "JSON { %1:%2 , %3:%4 , %5:%6 , %7:%8 , %9:%10 }"
+            "JSON_CREATE_1": "%1 %2 JSON { %3:%4 }",
+            "JSON_CREATE_2": "%1 %2 JSON { %3:%4 , %5:%6 }",
+            "JSON_CREATE_3": "%1 %2 JSON { %3:%4 , %5:%6 , %7:%8 }",
+            "JSON_CREATE_5": "%1 %2 JSON { %3:%4 , %5:%6 , %7:%8 , %9:%10 , %11:%12 }"
         }
     );
 
@@ -54,10 +54,10 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["ar"],
         {
             "JSON_CATEGORY": "JSON",
-            "JSON_CREATE_1": "JSON { %1:%2 }",
-            "JSON_CREATE_2": "JSON { %1:%2 , %3:%4 }",
-            "JSON_CREATE_3": "JSON { %1:%2 , %3:%4 , %5:%6 }",
-            "JSON_CREATE_5": "JSON { %1:%2 , %3:%4 , %5:%6 , %7:%8 , %9:%10 }"
+            "JSON_CREATE_1": "%1 %2 JSON { %3:%4 }",
+            "JSON_CREATE_2": "%1 %2 JSON { %3:%4 , %5:%6 }",
+            "JSON_CREATE_3": "%1 %2 JSON { %3:%4 , %5:%6 , %7:%8 }",
+            "JSON_CREATE_5": "%1 %2 JSON { %3:%4 , %5:%6 , %7:%8 , %9:%10 , %11:%12 }"
         }
     );
 

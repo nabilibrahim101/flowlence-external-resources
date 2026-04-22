@@ -30,7 +30,7 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {
             "RELAY_CATEGORY": "Relay",
-            "RELAY_OUTPUT": "%1 relay pin %2 output %3",
+            "RELAY_OUTPUT": "%1 %2 relay pin %3 output %4",
             "RELAY_ON": "ON",
             "RELAY_OFF": "OFF"
         }
@@ -39,7 +39,7 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["zh-cn"],
         {
             "RELAY_CATEGORY": "继电器",
-            "RELAY_OUTPUT": "%1 继电器引脚 %2 输出 %3",
+            "RELAY_OUTPUT": "%1 %2 继电器引脚 %3 输出 %4",
             "RELAY_ON": "开",
             "RELAY_OFF": "关"
         }
@@ -52,7 +52,7 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["ar"],
         {
             "RELAY_CATEGORY": "مُرحّل",
-            "RELAY_OUTPUT": "%1 مُرحّل منفذ %2 مخرج %3",
+            "RELAY_OUTPUT": "%1 %2 مُرحّل منفذ %3 مخرج %4",
             "RELAY_ON": "تشغيل",
             "RELAY_OFF": "إيقاف"
         }

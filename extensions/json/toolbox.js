@@ -3,7 +3,7 @@
 /* eslint-disable require-jsdoc */
 function registerToolboxs () {
     return `
-<category name="%{BKY_JSON_CATEGORY}" id="JSON_CATEGORY" colour="#5CB85C" secondaryColour="#4A9A4A">
+<category name="%{BKY_JSON_CATEGORY}" id="JSON_CATEGORY" colour="#5CB85C" secondaryColour="#4A9A4A" iconURI="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MCA0MCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIj48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIyMCIgZmlsbD0iIzVDQjg1QyIvPjxyZWN0IHg9IjkiIHk9IjYiIHdpZHRoPSIyMiIgaGVpZ2h0PSIyOCIgcng9IjMiIGZpbGw9IiNFOEY1RTkiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIwLjgiLz48cGF0aCBkPSJNMjQgNnY2aDYiIGZpbGw9IiNDOEU2QzkiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIwLjgiLz48cmVjdCB4PSIxMyIgeT0iMTYiIHdpZHRoPSIxNCIgaGVpZ2h0PSIyIiByeD0iMC41IiBmaWxsPSIjNENBRjUwIi8+PHJlY3QgeD0iMTMiIHk9IjIwIiB3aWR0aD0iMTAiIGhlaWdodD0iMiIgcng9IjAuNSIgZmlsbD0iIzRDQUY1MCIgb3BhY2l0eT0iMC43Ii8+PHJlY3QgeD0iMTMiIHk9IjI0IiB3aWR0aD0iMTIiIGhlaWdodD0iMiIgcng9IjAuNSIgZmlsbD0iIzRDQUY1MCIgb3BhY2l0eT0iMC41Ii8+PC9zdmc+Cg==">
     <block type="json_create_1" id="json_create_1">
         <value name="KEY1">
             <shadow type="text">

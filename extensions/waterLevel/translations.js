@@ -30,22 +30,22 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {
             "WATERLEVEL_CATEGORY": "Water Level",
-            "WATERLEVEL_INIT": "initialize water level sensor pin %1",
-            "WATERLEVEL_CALIBRATE": "calibrate: min value %1 max value %2",
-            "WATERLEVEL_READVALUE": "read water level raw value",
-            "WATERLEVEL_READPERCENT": "read water level %",
-            "WATERLEVEL_ISLOW": "water level is low (below %1 %)?"
+            "WATERLEVEL_INIT": "%1 %2 initialize water level sensor pin %3",
+            "WATERLEVEL_CALIBRATE": "%1 %2 calibrate: min value %3 max value %4",
+            "WATERLEVEL_READVALUE": "%1 %2 read water level raw value",
+            "WATERLEVEL_READPERCENT": "%1 %2 read water level %",
+            "WATERLEVEL_ISLOW": "%1 %2 water level is low (below %3 %)?"
         }
     );
 
     Object.assign(Blockly.ScratchMsgs.locales["zh-cn"],
         {
             "WATERLEVEL_CATEGORY": "水位",
-            "WATERLEVEL_INIT": "初始化水位传感器引脚 %1",
-            "WATERLEVEL_CALIBRATE": "校准: 最小值 %1 最大值 %2",
-            "WATERLEVEL_READVALUE": "读取水位原始值",
-            "WATERLEVEL_READPERCENT": "读取水位百分比",
-            "WATERLEVEL_ISLOW": "水位过低 (低于 %1 %)?"
+            "WATERLEVEL_INIT": "%1 %2 初始化水位传感器引脚 %3",
+            "WATERLEVEL_CALIBRATE": "%1 %2 校准: 最小值 %3 最大值 %4",
+            "WATERLEVEL_READVALUE": "%1 %2 读取水位原始值",
+            "WATERLEVEL_READPERCENT": "%1 %2 读取水位百分比",
+            "WATERLEVEL_ISLOW": "%1 %2 水位过低 (低于 %3 %)?"
         }
     );
 
@@ -56,11 +56,11 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["ar"],
         {
             "WATERLEVEL_CATEGORY": "مستوى المياه",
-            "WATERLEVEL_INIT": "تهيئة مستشعر مستوى المياه منفذ %1",
-            "WATERLEVEL_CALIBRATE": "معايرة: القيمة الدنيا %1 القيمة القصوى %2",
-            "WATERLEVEL_READVALUE": "قراءة قيمة مستوى المياه الخام",
-            "WATERLEVEL_READPERCENT": "قراءة نسبة مستوى المياه %",
-            "WATERLEVEL_ISLOW": "مستوى المياه منخفض (أقل من %1 %)؟"
+            "WATERLEVEL_INIT": "%1 %2 تهيئة مستشعر مستوى المياه منفذ %3",
+            "WATERLEVEL_CALIBRATE": "%1 %2 معايرة: القيمة الدنيا %3 القيمة القصوى %4",
+            "WATERLEVEL_READVALUE": "%1 %2 قراءة قيمة مستوى المياه الخام",
+            "WATERLEVEL_READPERCENT": "%1 %2 قراءة نسبة مستوى المياه %",
+            "WATERLEVEL_ISLOW": "%1 %2 مستوى المياه منخفض (أقل من %3 %)؟"
         }
     );
 

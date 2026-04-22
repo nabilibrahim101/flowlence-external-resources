@@ -30,26 +30,26 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {
             "WIFI_CATEGORY": "WiFi",
-            "WIFI_CONNECT": "connect to WiFi SSID %1 password %2",
-            "WIFI_IS_CONNECTED": "WiFi is connected?",
-            "WIFI_WAIT_CONNECTED": "wait until WiFi connected",
-            "WIFI_GET_IP": "WiFi IP address",
-            "WIFI_GET_RSSI": "WiFi signal strength (RSSI)",
-            "WIFI_GET_MAC": "WiFi MAC address",
-            "WIFI_DISCONNECT": "disconnect WiFi"
+            "WIFI_CONNECT": "%1 %2 connect to WiFi SSID %3 password %4",
+            "WIFI_IS_CONNECTED": "%1 %2 WiFi is connected?",
+            "WIFI_WAIT_CONNECTED": "%1 %2 wait until WiFi connected",
+            "WIFI_GET_IP": "%1 %2 WiFi IP address",
+            "WIFI_GET_RSSI": "%1 %2 WiFi signal strength (RSSI)",
+            "WIFI_GET_MAC": "%1 %2 WiFi MAC address",
+            "WIFI_DISCONNECT": "%1 %2 disconnect WiFi"
         }
     );
 
     Object.assign(Blockly.ScratchMsgs.locales["zh-cn"],
         {
             "WIFI_CATEGORY": "WiFi",
-            "WIFI_CONNECT": "连接到WiFi SSID %1 密码 %2",
-            "WIFI_IS_CONNECTED": "WiFi已连接？",
-            "WIFI_WAIT_CONNECTED": "等待WiFi连接",
-            "WIFI_GET_IP": "WiFi IP地址",
-            "WIFI_GET_RSSI": "WiFi信号强度 (RSSI)",
-            "WIFI_GET_MAC": "WiFi MAC地址",
-            "WIFI_DISCONNECT": "断开WiFi连接"
+            "WIFI_CONNECT": "%1 %2 连接到WiFi SSID %3 密码 %4",
+            "WIFI_IS_CONNECTED": "%1 %2 WiFi已连接？",
+            "WIFI_WAIT_CONNECTED": "%1 %2 等待WiFi连接",
+            "WIFI_GET_IP": "%1 %2 WiFi IP地址",
+            "WIFI_GET_RSSI": "%1 %2 WiFi信号强度 (RSSI)",
+            "WIFI_GET_MAC": "%1 %2 WiFi MAC地址",
+            "WIFI_DISCONNECT": "%1 %2 断开WiFi连接"
         }
     );
 
@@ -60,13 +60,13 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["ar"],
         {
             "WIFI_CATEGORY": "واي فاي",
-            "WIFI_CONNECT": "الاتصال بشبكة WiFi اسم الشبكة %1 كلمة المرور %2",
-            "WIFI_IS_CONNECTED": "هل WiFi متصل؟",
-            "WIFI_WAIT_CONNECTED": "انتظر حتى يتم الاتصال بـ WiFi",
-            "WIFI_GET_IP": "عنوان IP لـ WiFi",
-            "WIFI_GET_RSSI": "قوة إشارة WiFi (RSSI)",
-            "WIFI_GET_MAC": "عنوان MAC لـ WiFi",
-            "WIFI_DISCONNECT": "قطع الاتصال بـ WiFi"
+            "WIFI_CONNECT": "%1 %2 الاتصال بشبكة WiFi اسم الشبكة %3 كلمة المرور %4",
+            "WIFI_IS_CONNECTED": "%1 %2 هل WiFi متصل؟",
+            "WIFI_WAIT_CONNECTED": "%1 %2 انتظر حتى يتم الاتصال بـ WiFi",
+            "WIFI_GET_IP": "%1 %2 عنوان IP لـ WiFi",
+            "WIFI_GET_RSSI": "%1 %2 قوة إشارة WiFi (RSSI)",
+            "WIFI_GET_MAC": "%1 %2 عنوان MAC لـ WiFi",
+            "WIFI_DISCONNECT": "%1 %2 قطع الاتصال بـ WiFi"
         }
     );
 

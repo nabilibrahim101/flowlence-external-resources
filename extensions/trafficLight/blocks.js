@@ -5,8 +5,11 @@ function registerBlocks (Blockly) {
     const colour = '#E74C3C';
     const secondaryColour = '#C0392B';
 
-    // Traffic light icon - white outline style (3 circles in rectangle)
-    const trafficLightIconUrl = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiPjxyZWN0IHg9IjciIHk9IjIiIHdpZHRoPSIxMCIgaGVpZ2h0PSIyMCIgcng9IjIiLz48Y2lyY2xlIGN4PSIxMiIgY3k9IjYiIHI9IjIiLz48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIyIi8+PGNpcmNsZSBjeD0iMTIiIGN5PSIxOCIgcj0iMiIvPjwvc3ZnPg==';
+    // Traffic light icon - dark body with red, amber, green colored circles (padded from top)
+    const trafficLightIconUrl = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij48cmVjdCB4PSI2IiB5PSIyLjUiIHdpZHRoPSIxMiIgaGVpZ2h0PSIyMCIgcng9IjMiIGZpbGw9IiMzMzMiIHN0cm9rZT0iIzU1NSIgc3Ryb2tlLXdpZHRoPSIwLjgiLz48Y2lyY2xlIGN4PSIxMiIgY3k9IjYuNSIgcj0iMi41IiBmaWxsPSIjZTUzOTM1Ii8+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMi41IiByPSIyLjUiIGZpbGw9IiNGRkE3MjYiLz48Y2lyY2xlIGN4PSIxMiIgY3k9IjE4LjUiIHI9IjIuNSIgZmlsbD0iIzRDQUY1MCIvPjwvc3ZnPgo=';
+
+    // Vertical line separator
+    const separatorUrl = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0IDQwIiB3aWR0aD0iNCIgaGVpZ2h0PSI0MCI+PGxpbmUgeDE9IjIiIHkxPSIyIiB4Mj0iMiIgeTI9IjM4IiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC41KSIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvc3ZnPgo=';
 
     // ESP32 digital pins
     const digitalPins = [
@@ -31,20 +34,33 @@ function registerBlocks (Blockly) {
         ['GPIO 33', '33']
     ];
 
+    // Reusable icon + separator args
+    const iconArgs = [
+        {
+            type: 'field_image',
+            src: trafficLightIconUrl,
+            width: 36,
+            height: 36,
+            alt: 'Traffic Light',
+            flip_rtl: false
+        },
+        {
+            type: 'field_image',
+            src: separatorUrl,
+            width: 4,
+            height: 40,
+            alt: '|',
+            flip_rtl: false
+        }
+    ];
+
     // Initialize traffic light with 3 pins
     Blockly.Blocks.trafficLight_init = {
         init: function () {
             this.jsonInit({
-                message0: '%1 init traffic light red %2 orange %3 green %4',
+                message0: Blockly.Msg.TRAFFICLIGHT_INIT,
                 args0: [
-                    {
-                        type: 'field_image',
-                        src: trafficLightIconUrl,
-                        width: 24,
-                        height: 24,
-                        alt: 'Traffic Light',
-                        flip_rtl: false
-                    },
+                    ...iconArgs,
                     {
                         type: 'field_dropdown',
                         name: 'RED_PIN',
@@ -72,16 +88,9 @@ function registerBlocks (Blockly) {
     Blockly.Blocks.trafficLight_set = {
         init: function () {
             this.jsonInit({
-                message0: '%1 set %2 light to %3',
+                message0: Blockly.Msg.TRAFFICLIGHT_SET,
                 args0: [
-                    {
-                        type: 'field_image',
-                        src: trafficLightIconUrl,
-                        width: 24,
-                        height: 24,
-                        alt: 'Traffic Light',
-                        flip_rtl: false
-                    },
+                    ...iconArgs,
                     {
                         type: 'field_dropdown',
                         name: 'COLOR',
@@ -94,6 +103,45 @@ function registerBlocks (Blockly) {
                     {
                         type: 'field_dropdown',
                         name: 'STATE',
+                        options: [
+                            [Blockly.Msg.TRAFFICLIGHT_ON || 'ON', 'HIGH'],
+                            [Blockly.Msg.TRAFFICLIGHT_OFF || 'OFF', 'LOW']
+                        ]
+                    }
+                ],
+                colour: colour,
+                secondaryColour: secondaryColour,
+                extensions: ['shape_statement']
+            });
+        }
+    };
+
+    // Set all 3 lights at once
+    Blockly.Blocks.trafficLight_setAll = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.TRAFFICLIGHT_SET_ALL,
+                args0: [
+                    ...iconArgs,
+                    {
+                        type: 'field_dropdown',
+                        name: 'RED_STATE',
+                        options: [
+                            [Blockly.Msg.TRAFFICLIGHT_ON || 'ON', 'HIGH'],
+                            [Blockly.Msg.TRAFFICLIGHT_OFF || 'OFF', 'LOW']
+                        ]
+                    },
+                    {
+                        type: 'field_dropdown',
+                        name: 'ORANGE_STATE',
+                        options: [
+                            [Blockly.Msg.TRAFFICLIGHT_ON || 'ON', 'HIGH'],
+                            [Blockly.Msg.TRAFFICLIGHT_OFF || 'OFF', 'LOW']
+                        ]
+                    },
+                    {
+                        type: 'field_dropdown',
+                        name: 'GREEN_STATE',
                         options: [
                             [Blockly.Msg.TRAFFICLIGHT_ON || 'ON', 'HIGH'],
                             [Blockly.Msg.TRAFFICLIGHT_OFF || 'OFF', 'LOW']

@@ -30,14 +30,14 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {
             "GASSENSOR_CATEGORY": "Gas Sensor",
-            "GASSENSOR_READ": "gas sensor %1 %2 value"
+            "GASSENSOR_READ": "%1 %2 gas sensor %3 %4 value"
         }
     );
 
     Object.assign(Blockly.ScratchMsgs.locales["zh-cn"],
         {
             "GASSENSOR_CATEGORY": "气体传感器",
-            "GASSENSOR_READ": "气体传感器 %1 %2 值"
+            "GASSENSOR_READ": "%1 %2 气体传感器 %3 %4 值"
         }
     );
 
@@ -48,7 +48,7 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["ar"],
         {
             "GASSENSOR_CATEGORY": "مستشعر الغاز",
-            "GASSENSOR_READ": "مستشعر الغاز %1 %2 قيمة"
+            "GASSENSOR_READ": "%1 %2 مستشعر الغاز %3 %4 قيمة"
         }
     );
 

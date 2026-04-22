@@ -30,18 +30,18 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["en"],
         {
             "RFIDRC522_CATEGORY": "RFID RC522",
-            "RFIDRC522_INIT": "initialize RFID RC522 (I2C)",
+            "RFIDRC522_INIT": "%1 %2 initialize RFID RC522 (I2C)",
             "RFIDRC522_DETECTED": "RFID card detected?",
-            "RFIDRC522_READ": "read RFID card value"
+            "RFIDRC522_READ": "%1 %2 read RFID card value"
         }
     );
 
     Object.assign(Blockly.ScratchMsgs.locales["zh-cn"],
         {
             "RFIDRC522_CATEGORY": "RFID RC522",
-            "RFIDRC522_INIT": "初始化 RFID RC522 (I2C)",
+            "RFIDRC522_INIT": "%1 %2 初始化 RFID RC522 (I2C)",
             "RFIDRC522_DETECTED": "检测到RFID卡？",
-            "RFIDRC522_READ": "读取RFID卡值"
+            "RFIDRC522_READ": "%1 %2 读取RFID卡值"
         }
     );
 
@@ -52,9 +52,9 @@ function registerBlocksMessages (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales["ar"],
         {
             "RFIDRC522_CATEGORY": "RFID RC522",
-            "RFIDRC522_INIT": "تهيئة RFID RC522 (I2C)",
+            "RFIDRC522_INIT": "%1 %2 تهيئة RFID RC522 (I2C)",
             "RFIDRC522_DETECTED": "تم اكتشاف بطاقة RFID؟",
-            "RFIDRC522_READ": "قراءة قيمة بطاقة RFID"
+            "RFIDRC522_READ": "%1 %2 قراءة قيمة بطاقة RFID"
         }
     );
 
