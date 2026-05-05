@@ -5,8 +5,13 @@ function registerBlocks (Blockly) {
     const colour = '#27AE60';
     const secondaryColour = '#1E8449';
 
-    // LED icon as base64 SVG — yellow LED with two-layer glow halo (Option B from icon-preview.html)
-    const ledIconUrl = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSI5IiBmaWxsPSIjRkZFRTU4IiBvcGFjaXR5PSIwLjI1Ii8+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iNi41IiBmaWxsPSIjRkZFRTU4IiBvcGFjaXR5PSIwLjUiLz48ZWxsaXBzZSBjeD0iMTIiIGN5PSIxMS41IiByeD0iNCIgcnk9IjUiIGZpbGw9IiNGRkQ2MDAiIHN0cm9rZT0iI0Y1N0YxNyIgc3Ryb2tlLXdpZHRoPSIxIi8+PGVsbGlwc2UgY3g9IjEwLjgiIGN5PSIxMCIgcng9IjEuNCIgcnk9IjIiIGZpbGw9IiNGRkY1OUQiLz48cmVjdCB4PSI5LjUiIHk9IjE2IiB3aWR0aD0iNSIgaGVpZ2h0PSIyLjUiIGZpbGw9IiM3NTc1NzUiIHJ4PSIwLjUiLz48bGluZSB4MT0iMTAuNSIgeTE9IjE4LjUiIHgyPSIxMC41IiB5Mj0iMjEuNSIgc3Ryb2tlPSIjNjE2MTYxIiBzdHJva2Utd2lkdGg9IjEuNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGxpbmUgeDE9IjEzLjUiIHkxPSIxOC41IiB4Mj0iMTMuNSIgeTI9IjIxLjUiIHN0cm9rZT0iIzYxNjE2MSIgc3Ryb2tlLXdpZHRoPSIxLjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvc3ZnPg==';
+    // LED icon as base64 SVG — yellow LED dome with star-burst rays, blue base, two leads.
+    // Matches the visual language of the kit's actual LED module.
+    const ledIconUrl = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij48bGluZSB4MT0iMTIiIHkxPSIwIiB4Mj0iMTIiIHkyPSIxLjUiIHN0cm9rZT0iI0ZGRDYwMCIgc3Ryb2tlLXdpZHRoPSIxLjYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxsaW5lIHgxPSIyLjUiIHkxPSI2IiB4Mj0iNC41IiB5Mj0iNiIgc3Ryb2tlPSIjRkZENjAwIiBzdHJva2Utd2lkdGg9IjEuNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGxpbmUgeDE9IjIxLjUiIHkxPSI2IiB4Mj0iMTkuNSIgeTI9IjYiIHN0cm9rZT0iI0ZGRDYwMCIgc3Ryb2tlLXdpZHRoPSIxLjYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxsaW5lIHgxPSI0IiB5MT0iMS44IiB4Mj0iNS4zIiB5Mj0iMy4xIiBzdHJva2U9IiNGRkQ2MDAiIHN0cm9rZS13aWR0aD0iMS42IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48bGluZSB4MT0iMjAiIHkxPSIxLjgiIHgyPSIxOC43IiB5Mj0iMy4xIiBzdHJva2U9IiNGRkQ2MDAiIHN0cm9rZS13aWR0aD0iMS42IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cGF0aCBkPSJNNy41IDE0LjUgTDcuNSA4IFE3LjUgMi41IDEyIDIuNSBRMTYuNSAyLjUgMTYuNSA4IEwxNi41IDE0LjUgWiIgZmlsbD0iI0ZGRDYwMCIvPjxwYXRoIGQ9Ik05LjUgNS41IFE4LjcgNyA4LjcgOSBROC43IDEwLjUgOS4yIDEyIiBmaWxsPSJub25lIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMS4zIiBzdHJva2UtbGluZWNhcD0icm91bmQiIG9wYWNpdHk9IjAuOTUiLz48cGF0aCBkPSJNMTAuNSAxMiBMMTAuNSA5LjUgTDEzLjUgOS41IEwxMy41IDEyIFogTTEwLjUgOS41IEwxMiA3LjUgTDEzLjUgOS41IFoiIGZpbGw9IiNGNDUxMUUiLz48cmVjdCB4PSI2IiB5PSIxNC41IiB3aWR0aD0iMTIiIGhlaWdodD0iMi43IiBmaWxsPSIjMjE5NkYzIiByeD0iMC40Ii8+PGxpbmUgeDE9IjcuNSIgeTE9IjE1LjUiIHgyPSIxMC41IiB5Mj0iMTUuNSIgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utd2lkdGg9IjAuOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBvcGFjaXR5PSIwLjciLz48bGluZSB4MT0iMTAiIHkxPSIxNy4yIiB4Mj0iMTAiIHkyPSIyMS41IiBzdHJva2U9IiNCREJEQkQiIHN0cm9rZS13aWR0aD0iMS4xIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48bGluZSB4MT0iMTQiIHkxPSIxNy4yIiB4Mj0iMTQiIHkyPSIyMS41IiBzdHJva2U9IiNCREJEQkQiIHN0cm9rZS13aWR0aD0iMS4xIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48L3N2Zz4=';
+
+    // Vertical line separator placed between the icon and the rest of the block,
+    // matching the pattern used by DHT, Active Buzzer, and other Flowlence extensions.
+    const separatorUrl = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0IDQwIiB3aWR0aD0iNCIgaGVpZ2h0PSI0MCI+PGxpbmUgeDE9IjIiIHkxPSIyIiB4Mj0iMiIgeTI9IjM4IiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC41KSIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvc3ZnPgo=';
 
     // ESP32 digital pins
     const digitalPins = [
@@ -34,14 +39,22 @@ function registerBlocks (Blockly) {
     Blockly.Blocks.led_set = {
         init: function () {
             this.jsonInit({
-                message0: '%1 set LED on pin %2 to %3',
+                message0: '%1%2 set LED on pin %3 to %4',
                 args0: [
                     {
                         type: 'field_image',
                         src: ledIconUrl,
-                        width: 24,
-                        height: 24,
+                        width: 36,
+                        height: 36,
                         alt: 'LED',
+                        flip_rtl: false
+                    },
+                    {
+                        type: 'field_image',
+                        src: separatorUrl,
+                        width: 4,
+                        height: 40,
+                        alt: '|',
                         flip_rtl: false
                     },
                     {
