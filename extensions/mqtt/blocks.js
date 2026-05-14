@@ -191,6 +191,80 @@ function registerBlocks (Blockly) {
         }
     };
 
+    // Hat block: when MQTT message received
+    Blockly.Blocks.mqtt_when_message_received = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.MQTT_WHEN_MESSAGE_RECEIVED || '%1 %2 when MQTT message received',
+                args0: [
+                    ...iconArgs
+                ],
+                colour: colour,
+                secondaryColour: secondaryColour,
+                extensions: ['shape_hat']
+            });
+        }
+    };
+
+    // Reporter: the topic of the most recent MQTT message
+    Blockly.Blocks.mqtt_received_topic = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.MQTT_RECEIVED_TOPIC || '%1 %2 MQTT received topic',
+                args0: [
+                    ...iconArgs
+                ],
+                colour: colour,
+                secondaryColour: secondaryColour,
+                extensions: ['output_string']
+            });
+        }
+    };
+
+    // Reporter: the raw payload of the most recent MQTT message
+    Blockly.Blocks.mqtt_received_message = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.MQTT_RECEIVED_MESSAGE || '%1 %2 MQTT received message',
+                args0: [
+                    ...iconArgs
+                ],
+                colour: colour,
+                secondaryColour: secondaryColour,
+                extensions: ['output_string']
+            });
+        }
+    };
+
+    // Reporter: value at JSON key, with type dropdown (number / text / true-false)
+    Blockly.Blocks.mqtt_get_value = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.MQTT_GET_VALUE || '%1 %2 %3 from MQTT message at key %4',
+                args0: [
+                    ...iconArgs,
+                    {
+                        type: 'field_dropdown',
+                        name: 'TYPE',
+                        options: [
+                            ['number', 'NUMBER'],
+                            ['text', 'TEXT'],
+                            ['true/false', 'BOOLEAN']
+                        ]
+                    },
+                    {
+                        type: 'input_value',
+                        name: 'KEY',
+                        check: 'String'
+                    }
+                ],
+                colour: colour,
+                secondaryColour: secondaryColour,
+                extensions: ['output_string']
+            });
+        }
+    };
+
     return Blockly;
 }
 

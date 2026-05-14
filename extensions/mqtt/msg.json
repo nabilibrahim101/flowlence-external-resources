@@ -6,5 +6,9 @@
     "MQTT_SUBSCRIBE": "%1 subscribe to topic %2",
     "MQTT_IS_CONNECTED": "%1 is connected?",
     "MQTT_LOOP": "%1 MQTT loop",
-    "MQTT_DISCONNECT": "%1 disconnect"
+    "MQTT_DISCONNECT": "%1 disconnect",
+    "MQTT_WHEN_MESSAGE_RECEIVED": "%1 when MQTT message received",
+    "MQTT_RECEIVED_TOPIC": "%1 MQTT received topic",
+    "MQTT_RECEIVED_MESSAGE": "%1 MQTT received message",
+    "MQTT_GET_VALUE": "%1 %2 from MQTT message at key %3"
 }

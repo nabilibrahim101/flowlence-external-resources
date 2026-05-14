@@ -36,7 +36,11 @@ function registerBlocksMessages (Blockly) {
             "MQTT_SUBSCRIBE": "%1 %2 subscribe to topic %3",
             "MQTT_IS_CONNECTED": "%1 %2 is connected?",
             "MQTT_LOOP": "%1 %2 MQTT loop",
-            "MQTT_DISCONNECT": "%1 %2 disconnect"
+            "MQTT_DISCONNECT": "%1 %2 disconnect",
+            "MQTT_WHEN_MESSAGE_RECEIVED": "%1 %2 when MQTT message received",
+            "MQTT_RECEIVED_TOPIC": "%1 %2 MQTT received topic",
+            "MQTT_RECEIVED_MESSAGE": "%1 %2 MQTT received message",
+            "MQTT_GET_VALUE": "%1 %2 %3 from MQTT message at key %4"
         }
     );
 
@@ -49,7 +53,11 @@ function registerBlocksMessages (Blockly) {
             "MQTT_SUBSCRIBE": "%1 %2 订阅主题 %3",
             "MQTT_IS_CONNECTED": "%1 %2 已连接?",
             "MQTT_LOOP": "%1 %2 MQTT循环",
-            "MQTT_DISCONNECT": "%1 %2 断开连接"
+            "MQTT_DISCONNECT": "%1 %2 断开连接",
+            "MQTT_WHEN_MESSAGE_RECEIVED": "%1 %2 当收到MQTT消息时",
+            "MQTT_RECEIVED_TOPIC": "%1 %2 MQTT接收的主题",
+            "MQTT_RECEIVED_MESSAGE": "%1 %2 MQTT接收的消息",
+            "MQTT_GET_VALUE": "%1 %2 从MQTT消息中获取键 %4 的 %3"
         }
     );
 
@@ -66,7 +74,11 @@ function registerBlocksMessages (Blockly) {
             "MQTT_SUBSCRIBE": "%1 %2 الاشتراك في الموضوع %3",
             "MQTT_IS_CONNECTED": "%1 %2 متصل؟",
             "MQTT_LOOP": "%1 %2 حلقة MQTT",
-            "MQTT_DISCONNECT": "%1 %2 قطع الاتصال"
+            "MQTT_DISCONNECT": "%1 %2 قطع الاتصال",
+            "MQTT_WHEN_MESSAGE_RECEIVED": "%1 %2 عند استلام رسالة MQTT",
+            "MQTT_RECEIVED_TOPIC": "%1 %2 موضوع رسالة MQTT المستلمة",
+            "MQTT_RECEIVED_MESSAGE": "%1 %2 محتوى رسالة MQTT المستلمة",
+            "MQTT_GET_VALUE": "%1 %2 %3 من رسالة MQTT عند المفتاح %4"
         }
     );
 

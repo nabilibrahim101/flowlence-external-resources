@@ -69,6 +69,16 @@ function registerToolboxs () {
     </block>
     <block type="mqtt_isConnected" id="mqtt_isConnected"></block>
     <block type="mqtt_loop" id="mqtt_loop"></block>
+    <block type="mqtt_when_message_received" id="mqtt_when_message_received"></block>
+    <block type="mqtt_received_topic" id="mqtt_received_topic"></block>
+    <block type="mqtt_received_message" id="mqtt_received_message"></block>
+    <block type="mqtt_get_value" id="mqtt_get_value">
+        <value name="KEY">
+            <shadow type="text">
+                <field name="TEXT">led_state</field>
+            </shadow>
+        </value>
+    </block>
     <block type="mqtt_disconnect" id="mqtt_disconnect"></block>
 </category>`;
 }
